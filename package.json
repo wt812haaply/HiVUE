@@ -81,5 +81,15 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wt812haaply/HiVUE.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wt812haaply/HiVUE/issues"
+  },
+  "homepage": "https://github.com/wt812haaply/HiVUE#readme"
 }
