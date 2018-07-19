@@ -1,0 +1,29 @@
+<template>
+  <div class="appContainer">
+    <div class="appHeader">
+      我的
+    </div>
+    <div class="appContent">
+      <div style="height:1500px">1111</div>
+    </div>
+    <div class="appFooter">
+      <NavList />
+    </div>
+  </div>
+</template>
+<script>
+import NavList from '@/pages/links/NavList'
+export default ({
+  name: 'four',
+  data() {
+    return {}
+  },
+  components: {
+    NavList
+  }
+})
+</script>
+<style scoped lang='scss'>
+
+
+</style>
