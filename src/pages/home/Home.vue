@@ -5,7 +5,7 @@
     </div>
 
     <div class="appContent">
-    <div style="height:100px; line-height: 100px;" @click="abcd">stick</div>
+    <div style="height:100px; line-height: 100px;" @click="abcd">1stick</div>
     <!-- <div></div> -->
     <!-- <transition name="animated" enter-active-class="animated bounceOutLeft" leave-active-class="animated bounceOutRight">
       <div class="homItem" v-show="headMsg">
