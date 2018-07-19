@@ -68,7 +68,10 @@ export default new Router({
     {
       path: '/pages/links/Three',
       name: 'three',
-      component: Three
+      component: Three,
+      meta: {
+        title: '3333'
+      }
     },
     {
       path: '/pages/links/Four',

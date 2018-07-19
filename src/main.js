@@ -15,13 +15,14 @@ Vue.use(VueLazyload)
 import store from './store'
 Vue.prototype.bus = new Vue()
 // title
-import {afterEach} from '@/router/globalGuards'
+import VueWechatTitle from 'vue-wechat-title'
+Vue.use(VueWechatTitle)
 // fastClick
 import fastClick from 'fastClick'
 Vue.config.productionTip = false
 fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
-router.afterEach(afterEach)
+// router.afterEach(afterEach)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

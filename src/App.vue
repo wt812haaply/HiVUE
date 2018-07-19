@@ -1,31 +1,30 @@
 <template>
   <div id="app">
-    <!--<img src="./assets/logo.png">-->
-    <router-view/>
+    <router-view v-wechat-title="$route.meta.title"/>
   </div>
 </template>
-
 <script>
-
 export default {
   name: 'App',
-  components:{
-  }
+  components: {}
 }
-</script>
 
+</script>
 <style>
-body{
+body {
   background: #fff;
   font-family: 'PingFang SC'
 }
-i{
-	font-style: normal
+
+i {
+  font-style: normal
 }
-  .navListActive{
-    color: red;
-  }
-  #app{
-    height: 100%;
-  }
+
+.navListActive {
+  color: red;
+}
+
+#app {
+  height: 100%;
+}
 </style>

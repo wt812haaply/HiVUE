@@ -2,7 +2,7 @@
 * @Author: nagy.wang
 * @Date:   2018-07-01 14:58:13
 * @Last Modified by:   nagy.wang
-* @Last Modified time: 2018-07-19 13:58:48
+* @Last Modified time: 2018-07-19 14:05:10
 */
 
 $unit:1rem/18.75;
@@ -10,6 +10,7 @@ $img:100%;
 /* ! 
   全局框架 
 */
+
 @mixin layout($appheadHeight,$appFooterHeight){
   .appContainer {
     display: flex;
@@ -237,7 +238,7 @@ $img:100%;
     }
 
     @else if $line == noLine{
-        /* border-left */
+        /* border: none; */
         &:after{
             width: 0;
             height: 0;
