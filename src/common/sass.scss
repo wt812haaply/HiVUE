@@ -2,11 +2,8 @@
 * @Author: nagy.wang
 * @Date:   2018-07-01 14:58:13
 * @Last Modified by:   nagy.wang
-* @Last Modified time: 2018-07-18 17:01:24
+* @Last Modified time: 2018-07-19 13:58:48
 */
-
-/* @import 'test.css';  测试用的样式 */
-/* @import 'border.css'; H5 1像素边框 */
 
 $unit:1rem/18.75;
 $img:100%;
@@ -19,10 +16,9 @@ $img:100%;
     flex-direction: column;
     height: 100%;
     & > .appHeader {
-      /* height: $appheadHeight * $unit;
-      line-height: $appheadHeight * $unit; */
+      height: $appheadHeight * $unit;
+      line-height: $appheadHeight * $unit;
       background: red;
-      padding:0  (12 * $unit);
     }
     & > .appContent {
       flex: 1;
@@ -86,35 +82,6 @@ $img:100%;
   居中 (1、固定宽、高，2.自适应宽、高)
 */
 
-/*
-@mixin transform($w){
-  transform: translateX($w) translateY($w);
-}
-
-@mixin center($width: null, $height: null) {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  @if $width and $height {
-    width: $width * $unit;
-    height: $height * $unit;
-    background: yellow;
-    position: fixed !important;
-    margin-left: -($width / 2 * $unit) !important;
-    margin-top: -($height / 2 * $unit) !important;
-    margin-top: 0;
-    z-index:1;
-  }
-
-  @else if not $height {
-    width: $width * $unit;
-    @include transform(-50%);
-    z-index:1;
-  }
-}
-*/
-
 @mixin transform($w){
   transform: translateX($w) translateY($w);
 }
@@ -124,28 +91,26 @@ $img:100%;
   top: 50%;
   left: 50%;
   /* 存在 width height */
-  @if $width and $height {
-    width: $width * $unit;
-    height: $height * $unit;
-    background: #fff;
-    /*FF IE7*/
-    position: fixed !important;
-    /*FF IE7 该值为本身宽的一半 */
-    margin-left: -($width / 2 * $unit) !important;
-    /*FF IE7 该值为本身高的一半*/
-    margin-top: -($height / 2 * $unit) !important;
-    margin-top: 0;
-    z-index:2;
-  }
-  /* 没有高度 height */
-  @else if not $height {
-    width: $width * $unit;
-    background: #fff;
-    @include transform(-50%);
-    z-index:2;
-
-  }   
-
+    @if $width and $height {
+      width: $width * $unit;
+      height: $height * $unit;
+      background: #fff;
+      /*FF IE7*/
+      position: fixed !important;
+      /*FF IE7 该值为本身宽的一半 */
+      margin-left: -($width / 2 * $unit) !important;
+      /*FF IE7 该值为本身高的一半*/
+      margin-top: -($height / 2 * $unit) !important;
+      margin-top: 0;
+      z-index:2;
+    }
+    /* 没有高度 height */
+    @else if not $height {
+      width: $width * $unit;
+      background: #fff;
+      @include transform(-50%);
+      z-index:2;
+    }   
   }
  & > .mask { 
     background-color:rgba(0,100,100,1);
