@@ -1,0 +1,55 @@
+<template>
+	<div>
+		<div class="hello" @click="bbclick">1111 ---- {{ number }}</div>
+
+	</div>
+</template>
+<script>
+export default {
+  data() {
+    return {
+    	number:'0'
+    }
+  },
+  methods:{
+  		bbclick(){
+  			this.number ++
+  			this.$emit('change')
+  		}
+  }
+}
+
+</script>
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+.main {}
+
+.header {
+  /* padding: 8px 10px; */
+}
+
+.auto_fixed {
+  height: 3em;
+  background: rgba(0, 0, 0, .4);
+  line-height: 3em;
+  text-align: center;
+}
+
+.fixed {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+
+.content {
+  color: gray;
+  padding: 8px;
+}
+
+[lang|=en] {
+  height: 2000px;
+  background-color: yellow;
+}
+
+</style>
+</code>

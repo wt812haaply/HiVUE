@@ -14,6 +14,8 @@ const Three = () => import('@/pages/links/Three')
 const Four = () => import('@/pages/links/Four')
 const SNE = () => import('@/pages/sticky/Sne')
 const Aa = () => import('@/pages/bus/a')
+const Xiding = () => import('@/pages/xiding/xiding')
+const AA = () => import('@/pages/xiding/AA')
 
 Vue.use(Router)
 export default new Router({
@@ -88,6 +90,16 @@ export default new Router({
       path: '/pages/bus/a',
       name: 'a',
       component: Aa
+    },
+    {
+      path: '/pages/xiding/xiding',
+      name: 'xiding',
+      component: Xiding
+    },
+    {
+      path: '/pages/xiding/AA',
+      name: 'AA',
+      component: AA
     }
   ]
 })

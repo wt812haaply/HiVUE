@@ -38,5 +38,6 @@ export default {
 	@include LineH(40);
 	background: #fff;
 	position: relative;
+	min-height: 40 * $unit;
 }
 </style>

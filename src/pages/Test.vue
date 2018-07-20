@@ -1,5 +1,7 @@
 <template>
 	<div>
+		<div style="width: 100%; height: 50px; background: RED"></div>
+		<Xiding></Xiding>
 		<ul>
 		    <router-link 
 		    	:to="{path: '/pages/' + item.url + item.tag}"
@@ -13,6 +15,7 @@
 	</div>
 </template>
 <script>
+import Xiding from '@/pages/xiding/xiding'
 export default{
 	name:'test',
 	data () {
@@ -36,8 +39,17 @@ export default{
 				name:'bus',
 				tag:'a'
 
+			},
+			{
+				id: '004',
+				url: 'xiding/',
+				name: 'xiding',
+				tag: 'xiding'
 			}]
 		}
+	},
+	components:{
+		Xiding
 	}
 }
 </script>

@@ -18,7 +18,7 @@ export default {
 	data(){
 		return {
 			scrollY: null,
-      msg:'数据是由Sne提供的'
+      		msg:'数据是由Sne提供的'
 		}
 	},
   components:{

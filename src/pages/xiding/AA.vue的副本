@@ -1,0 +1,44 @@
+<template>
+  <div>
+    <BB ref="one" @change="changebb" />
+    <BB ref="two" @change="changebb" />
+    <div @click="AAclick" class="abbb">按钮 {{ cont }}</div>
+    
+  </div>
+</template>
+<script>
+import BB from '@/pages/xiding/BB'
+export default {
+  name: 'app',
+  data(){
+    return {
+      cont:'0'
+    }
+  },
+  components:{
+    BB
+  },
+  methods: {　　
+    AAclick(event){
+      // console.log(this.cont)
+      // this.cont = this.refs.bba + this.refs.bbb
+      // console.log( this.cont)
+    },
+    changebb(){
+      // alert('change')
+      console.log('change')
+      // console.log(this.$refs.one.number)
+      // console.log(this.$refs.two.number)
+      this.cont = this.$refs.one.number + this.$refs.two.number
+    }
+  }
+}
+
+</script>
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang='scss'>
+div{
+  @include LineH(60);
+}
+
+</style>

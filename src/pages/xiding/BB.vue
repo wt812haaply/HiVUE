@@ -1,0 +1,54 @@
+<template>
+	<div >
+		<div @click="bbclick" class="hello" >1111 ---- {{ cont }}</div>
+	</div>
+</template>
+<script>
+export default {
+  data() {
+    return {
+    	bbmsg:'',
+    }
+  },
+  props:['cont'],
+  methods:{
+  	bbclick(){
+
+  	}
+  },
+}
+
+</script>
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+.main {}
+
+.header {
+  /* padding: 8px 10px; */
+}
+
+.auto_fixed {
+  height: 3em;
+  background: rgba(0, 0, 0, .4);
+  line-height: 3em;
+  text-align: center;
+}
+
+.fixed {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+
+.content {
+  color: gray;
+  padding: 8px;
+}
+
+[lang|=en] {
+  height: 2000px;
+  background-color: yellow;
+}
+
+</style>
+</code>
