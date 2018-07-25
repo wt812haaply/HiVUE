@@ -161,8 +161,6 @@ export default {
         id: '0001',
         listCon: {
           src: 'http://tu.yi23.net/Thumbs/41-20180629_105207-1530240727710-1.jpg!750',
-          error: require('../../assets/error.jpeg'),
-          loading: require('../../assets/loading.gif'),
           name: '金色流苏礼服',
           comment: '1000',
           money: '281',
@@ -173,8 +171,6 @@ export default {
         id: '0002',
         listCon: {
           src: 'http://tu.yi23.net/Thumbs/41-20180702_170259-1530522179742-1.jpg!750',
-          error: require('../../assets/error.jpeg'),
-          loading: require('../../assets/loading.gif'),
           name: '浅绿色抹胸礼服',
           comment: '10',
           money: '259',
@@ -185,8 +181,6 @@ export default {
         id: '0003',
         listCon: {
           src: 'http://tu.yi23.net/Thumbs/586-20180630_192956-1530358196975-1.jpg!750',
-          error: require('../../assets/error.jpeg'),
-          loading: require('../../assets/loading.gif'),
           name: '酒红色金色亮片娃娃领礼服酒红色金色亮片娃娃领\礼服',
           comment: '30',
           money: '300',
@@ -198,8 +192,6 @@ export default {
         id: '0004',
         listCon: {
           src: 'http://tu.yi23.net/Thumbs/586-20180630_192956-1530358196975-1.jpg!750',
-          error: require('../../assets/error.jpeg'),
-          loading: require('../../assets/loading.gif'),
           name: '酒红色金色亮片娃娃领礼服酒红色金色亮片娃娃领礼服',
           comment: '30',
           money: '300',
@@ -211,8 +203,6 @@ export default {
         id: '0005',
         listCon: {
           src: 'http://tu.yi23.net/Thumbs/586-20180630_192956-1530358196975-1.jpg!750',
-          error: require('../../assets/error.jpeg'),
-          loading: require('../../assets/loading.gif'),
           name: '酒红色金色亮片娃娃领礼服酒红色金色亮片娃娃领礼服',
           comment: '30',
           money: '300',

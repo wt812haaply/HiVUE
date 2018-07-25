@@ -1,8 +1,9 @@
 <template>
   <div>
+    <div class="mnm"></div>
     <BB :cont="contB" />
     <div ref="hello" class="ab" @click="aaclick" >按钮</div>
-    
+    <div style="height:3000px;">111</div>
   </div>
 </template>
 <script>

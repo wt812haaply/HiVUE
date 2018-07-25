@@ -3,7 +3,7 @@
     <swiper :options="swiperOption">
       <!-- slides -->
       <swiper-slide class="slideIMG" v-for="item in cont" :key="item.id">
-        <img :src="item.imgUrl" alt="" @click="oneClick">
+        <img v-lazy="item.imgUrl" alt="" @click="oneClick">
       </swiper-slide>
       <!-- Optional controls -->
       <div class="swiper-pagination" slot="pagination"></div>
