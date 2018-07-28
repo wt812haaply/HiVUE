@@ -4,6 +4,8 @@
       衣箱
     </div>
     <div class="appContent">
+
+      <!-- 1 -->
       <div lang="en" @click="closeB">打开popUp</div>
       <PopUp 
         @btnLeft="linksA" 
@@ -36,7 +38,9 @@
           <div class="oneBtn">关闭</div>
         </div>
       </PopUp>
+
       
+      <!-- 2 -->
       <div lang="en" @click="showPrompt">打开prompt</div>
       <Prompt 
         :open="OpenPrompt"
@@ -45,6 +49,34 @@
         >
         <p slot="prompt_info">{{ promptMsg }}</p>
       </Prompt>
+
+
+      <!-- 3 -->
+      <div lang="en" @click="FadeInUp">打开FadeInUp</div>
+      <Fade-In-Up 
+        @FadeInUpI="CloseFadeInUp"
+        :open="OpenFadeInUp"
+      >
+        <div slot="title">title</div>
+        <div slot="list">
+          <div>dkfldkfldkfl</div>
+          <div>dkfldkfldkfl</div>
+          <div>dkfldkfldkfl</div>
+          <div class="info">
+            这里是文案，显示2行这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案
+          </div>
+          <div class="info">
+            这里是文案，显示2行这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案
+          </div>
+          <div class="info">
+            这里是文案，显示2行这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案
+          </div>
+          <div class="info">
+            1这里是文案，显示2行这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案
+          </div>
+        </div>
+
+      </Fade-In-Up>
     </div>
     <div class="appFooter">
       <NavList />
@@ -55,12 +87,14 @@
 import NavList from '@/pages/links/NavList'
 import Prompt from '@/pages/lib/Prompt'
 import PopUp from '@/pages/lib/PopUp'
+import FadeInUp from '@/pages/lib/FadeInUp'
 export default {
   name: 'three',
   data() {
     return {
       dialogOpen: false,
       promptState:false,
+      OpenFadeInUp:false,
       promptMsg: '这里是错误提示！这里是错误提示！这里是错误提示！这里是错误提示！这里是错误提示！这里是错误提示！',
 
 
@@ -92,11 +126,22 @@ export default {
     ColsePrompt() {
         this.OpenPrompt = false
     },
+
+
+    // FadeInUp
+    FadeInUp(){
+      this.OpenFadeInUp = !this.OpenFadeInUp
+      console.log("------this.FadeInUpOpen------")
+    },
+    CloseFadeInUp() {
+      this.FadeInUp();
+    }
   },
   components: {
     NavList,
     PopUp,
     Prompt,
+    FadeInUp
   }
 }
 
@@ -161,11 +206,9 @@ export default {
   }
 }
 
-
-
-
 /* 忽略style */
 div[lang|=en]{
   @include LineH(50);
 }
+
 </style>
