@@ -6,13 +6,13 @@
     <div class="appContent">
 
       <!-- 1 -->
-      <div lang="en" @click="closeB">打开popUp</div>
-      <PopUp 
+      <div lang="en" @click="closeB">打开PopupCenter</div>
+      <Popup-Center 
         @btnLeft="linksA" 
         @btnRight="linksB" 
-        @popUpClose="closeB" 
+        @closeCenterBtn="closeB" 
         @oneBtn="oneBtn" 
-        :open="dialogOpen">
+        :open="OpenPopupCenter">
         <div slot="banner">
           <div class="banner">
             <img src="http://tu.yi23.net/collections/863-20180528_184712-1527504432586-1.jpg" alt="">
@@ -37,7 +37,8 @@
         <div slot="oneBtn">
           <div class="oneBtn">关闭</div>
         </div>
-      </PopUp>
+      </Popup-Center>
+      <!-- 1 End-->
 
       
       <!-- 2 -->
@@ -52,31 +53,44 @@
 
 
       <!-- 3 -->
-      <div lang="en" @click="FadeInUp">打开FadeInUp</div>
-      <Fade-In-Up 
-        @FadeInUpI="CloseFadeInUp"
-        :open="OpenFadeInUp"
+      <div lang="en" @click="PopupDown">打开PopupDown</div>
+      <Popup-Down
+        @PopupDownI="ClosePopupDown"
+        :open="OpenPopupDwon"
       >
-        <div slot="title">title</div>
+        <div slot="title">
+          <div class="title">title <i>x</i></div>
+        </div>
         <div slot="list">
           <div>dkfldkfldkfl</div>
-          <div>dkfldkfldkfl</div>
-          <div>dkfldkfldkfl</div>
-          <div class="info">
-            这里是文案，显示2行这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案
-          </div>
-          <div class="info">
-            这里是文案，显示2行这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案
-          </div>
-          <div class="info">
-            这里是文案，显示2行这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案
-          </div>
-          <div class="info">
-            1这里是文案，显示2行这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案
-          </div>
+          <ul class="listUl">
+              <li>111111</li>
+              <li>222</li>
+              <li>333</li>
+              <li>4444</li>
+              <li>222</li>
+              <li>333</li>
+              <li>4444</li>
+              <li>222</li>
+              <li>333</li>
+              <li>last--4444</li>
+          </ul>
         </div>
+      </Popup-Down>
+      <!-- 3 End -->
 
-      </Fade-In-Up>
+      <!-- 4 -->
+      <div lang="en" @click="PopupRight">打开PopupRight</div>
+
+        <Popup-Right
+          :open="OpenPopupRight"
+          @closeRightBtn="closeRight"
+        >
+          <div>111</div>
+          <div>222</div>
+        </Popup-Right>
+
+        
     </div>
     <div class="appFooter">
       <NavList />
@@ -87,14 +101,18 @@
 import NavList from '@/pages/links/NavList'
 import Prompt from '@/pages/lib/Prompt'
 import PopUp from '@/pages/lib/PopUp'
-import FadeInUp from '@/pages/lib/FadeInUp'
+import PopupCenter from '@/pages/lib/PopupCenter'
+import PopupDown from '@/pages/lib/PopupDown'
+import PopupRight from '@/pages/lib/PopupRight'
+import PopupRight1 from '@/pages/lib/PopupRight1'
 export default {
   name: 'three',
   data() {
     return {
-      dialogOpen: false,
+      OpenPopupCenter: false,
       promptState:false,
-      OpenFadeInUp:false,
+      OpenPopupDwon:false,
+      OpenPopupRight:false,
       promptMsg: '这里是错误提示！这里是错误提示！这里是错误提示！这里是错误提示！这里是错误提示！这里是错误提示！',
 
 
@@ -103,6 +121,7 @@ export default {
     }
   },
   methods: {
+    // PopupCenter
     linksA() {
       console.log("left的按钮")
     },
@@ -110,8 +129,8 @@ export default {
       console.log("right的按钮")
     },
     closeB() {
-      this.dialogOpen = !this.dialogOpen
-      console.log("------this.dialogOpen------")
+      this.OpenPopupCenter = !this.OpenPopupCenter
+      console.log("------this.OpenPopupCenter------")
     },
     oneBtn() {
       console.log("-----oneBtn按钮关闭-----")
@@ -128,20 +147,33 @@ export default {
     },
 
 
-    // FadeInUp
-    FadeInUp(){
-      this.OpenFadeInUp = !this.OpenFadeInUp
-      console.log("------this.FadeInUpOpen------")
+    // PopupDown
+    PopupDown(){
+      this.OpenPopupDwon = !this.OpenPopupDwon
+      console.log("------this.PopupDown true------")
     },
-    CloseFadeInUp() {
-      this.FadeInUp();
+    ClosePopupDown() {
+      this.PopupDown();
+      console.log("------this.OpenPopupDwon false------")
+    },
+
+    // PopupRight
+    PopupRight(){
+      this.OpenPopupRight = !this.OpenPopupRight
+    },
+    closeRight(){
+      this.PopupRight()
     }
   },
   components: {
     NavList,
     PopUp,
     Prompt,
-    FadeInUp
+
+    PopupCenter,
+    PopupDown,
+    PopupRight,
+    PopupRight1,
   }
 }
 
@@ -211,4 +243,28 @@ div[lang|=en]{
   @include LineH(50);
 }
 
+
+
+/* popupDown */
+.title{
+  color: red;
+  @include LineH(40)
+  text-align: left;
+  font-size: 14 * $unit;
+  background:#A8FF1A;
+  display: flex;
+
+  i{
+    text-align: right;
+    flex: 1;
+    padding-right: 12px;
+  }
+}
+ul.listUl{
+  li{
+    color: blue;
+    @include LineH(50)
+    background: pink;
+  }
+}
 </style>

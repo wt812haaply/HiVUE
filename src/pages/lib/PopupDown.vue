@@ -4,7 +4,7 @@
   	<div class="FadeInUp" v-if="open">
 		<div class="FadeInUpCon">
 			<div class="hah">
-				<div class="title" @click="CloseFadeInUp">
+				<div @click="ClosePopupDown">
 					<slot name="title"></slot>
 				</div>
 				<div class="list">
@@ -12,7 +12,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="FadeInUpMask" @click="CloseFadeInUp"></div>
+		<div class="FadeInUpMask" @click="ClosePopupDown"></div>
 	</div>
 	</transition>
 </template>
@@ -22,7 +22,7 @@
 // 组件 import BScroll from 'better-scroll'
 // api import { orderList } from 'api/event'
 export default {
-	name:'FadeInUp',
+	name:'PopupDown',
 	data () {
 		return{
 
@@ -38,8 +38,8 @@ export default {
 
 	// 事件方法
 	methods: {
-		CloseFadeInUp(){
-	        this.$emit("FadeInUpI")
+		ClosePopupDown(){
+	        this.$emit("PopupDownI")
 	     }
 	},
 
@@ -66,10 +66,10 @@ export default {
 <style scoped lang='scss'>
 
   .prompt-enter-active {
-    animation: fadeInUp .1s;
+    animation: fadeInUp .2s;
   }
   .prompt-leave-active {
-    animation: fadeInUp .06s reverse;
+    animation: fadeInUp .1s reverse;
   }
   @keyframes fadeInUp {
     from {
@@ -86,12 +86,11 @@ export default {
 	bottom: -1px;
 	@include LineH(50);
 	width: 100%;
-	font-size: 12 * $unit;
+	height: 100%;
 	& > &Con{
 		background:#fff;
 		width: 100%;
 		height:300px;
-		/* overflow: scroll; */
 		position: absolute;
 		bottom: 0;
 		z-index: 10;
@@ -111,26 +110,16 @@ export default {
 	}
 }
 
+
 .hah{
 	display: flex;
 	width: 100%;
-	flex-wrap: wrap;
-
-
-	.title{
-		display: flex;
-		background: red;
-		width: 100%;
-		@include LineH(50)
-	}
+	height: 100%;
+	flex-direction: column;
 	.list{
-    display: flex;
-    width: 100%;
-    height: 250 * $unit;
-    background: #eee;
-    overflow: scroll;
-    flex-wrap: wrap;
- 	}
-	
+		flex: 1;
+		overflow: scroll;
+	}
 }
+
 </style>
