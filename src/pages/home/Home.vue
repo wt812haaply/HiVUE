@@ -1,7 +1,7 @@
 <template>
   <div class="appContainer">
     <div class="appHeader">
-      <Home-Header :headinfo="header" />
+      <home-Header :headinfo="header" />
     </div>
 
     <div class="appContent">
@@ -14,37 +14,37 @@
         </div>
       </div>
     </transition> -->
-    <Home-Swiper :cont="swiperList" />
-    <Home-Icons :cont="iconList" />
-    <Home-Recommend :cont="recList" />
-    <Home-Likes :cont="likesList" />
-    <Home-PopUp />
+    <home-Swiper :cont="swiperList" />
+    <home-Icons :cont="iconList" />
+    <home-Recommend :cont="recList" />
+    <home-Likes :cont="likesList" />
+    <home-PopUp />
     </div>
     <div class="appFooter">
-      <NavList />
+      <navList />
     </div>
   </div>
 
 </template>
 <!-- js -->
 <script>
-import NavList from '@/pages/links/NavList'
-import HomeHeader from './components/Header'
-import HomeSwiper from './components/Swiper'
-import HomeIcons from './components/Icons'
-import HomeRecommend from './components/Recommend'
-import HomeLikes from './components/Likes'
-import HomePopUp from './components/PopUp'
+import navList from '@/pages/links/NavList'
+import homeHeader from './components/Header'
+import homeSwiper from './components/Swiper'
+import homeIcons from './components/Icons'
+import homeRecommend from './components/Recommend'
+import homeLikes from './components/Likes'
+import homePopUp from './components/PopUp'
 export default {
   name: 'Home',
   components: {
-    HomeHeader,
-    HomeSwiper,
-    HomeIcons,
-    HomeRecommend,
-    HomeLikes,
-    HomePopUp,
-    NavList
+    homeHeader,
+    homeSwiper,
+    homeIcons,
+    homeRecommend,
+    homeLikes,
+    homePopUp,
+    navList
   },
   data() {
     return {

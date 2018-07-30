@@ -1,18 +1,17 @@
 <template>
   <transition 
-    name="prompt" 
-    @after-enter="promptShow" 
-    @after-leave="promptHide"
+    name="notify" 
+    @after-enter="showNotify" 
   >
 
-  <div class="prompt" v-if="open">
-  	<slot name="prompt_info"></slot>
+  <div class="notify" v-if="open">
+    <slot name="notifyInfo"></slot>
   </div>
 </transition>
 </template>
 <script>
 export default {
-  name: 'Prompt',
+  name: 'Notify',
   data () {
     return {
       timer: '',
@@ -38,13 +37,13 @@ export default {
     // }
   },
   methods: {
-    promptShow: function () {
+    showNotify: function () {
       this.$emit('show')
       if (this.timer) {
         clearTimeout(this.timer)
       }
       this.timer = setTimeout(() => {
-        this.$emit('toastColse')
+        this.$emit('ColseNotify')
         // this.currentMsg=''
       }, this.getStep)
     },
@@ -55,18 +54,18 @@ export default {
 }
 </script>
 <style scoped lang='scss'>
-.prompt{
-	position: absolute;
-	width: 100%;
-	bottom: 0;
-	@include LineH(50);
-	background: red;
-	font-size: 12 * $unit;
+.notify{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  @include LineH(50);
+  background: red;
+  font-size: 12 * $unit;
 }
-  .prompt-enter-active {
+  .notify-enter-active {
     animation: fadeIns 1s;
   }
-  .prompt-leave-active {
+  .notify-leave-active {
     animation: fadeIns .5s reverse;
   }
   @keyframes fadeIns {

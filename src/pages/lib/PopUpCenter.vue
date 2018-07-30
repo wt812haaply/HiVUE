@@ -11,13 +11,15 @@
 
           <ul class="popBtn">
             <li @click="btnA">
-            <slot name="btnA"></slot>
+              <slot name="btnA"></slot>
             </li>
             <li @click="btnB">
-            <slot name="btnB"></slot>
-          </li>
+              <slot name="btnB"></slot>
+            </li>
+            <li @click="btnC">
+              <slot name="btnC"></slot>
+            </li>
           </ul>
-
 
           <div @click="oneBtn">
             <slot name="oneBtn"></slot>
@@ -40,10 +42,13 @@ export default {
 props: ['open'],
  methods: {
       btnA: function () {
-        this.$emit('btnLeft')
+        this.$emit('btnA')
       },
       btnB: function () {
-        this.$emit('btnRight')
+        this.$emit('btnB')
+      },
+      btnC: function () {
+        this.$emit('btnC')
       },
       maskClose(){
         this.$emit("closeCenterBtn")

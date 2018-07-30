@@ -23,12 +23,12 @@
       </div>
     </div>
     <div class="appFooter">
-      <NavList />
+      <navList />
     </div>
   </div>
 </template>
 <script>
-import NavList from '@/pages/links/NavList'
+import navList from '@/pages/links/NavList'
 export default {
   name: 'two',
   data() {
@@ -59,7 +59,7 @@ export default {
     console.log(this.$route.path);
   },
   components: {
-    NavList,
+    navList,
   },
 
 }

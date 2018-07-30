@@ -41,11 +41,12 @@ props: ['open'],
   width: 80%;
   height: 100%;
   background: green;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 9;
   float: right;
+  overflow: scroll;
 }
 
 .PopupRight{

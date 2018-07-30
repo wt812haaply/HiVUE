@@ -5,11 +5,12 @@
     </div>
     <div class="appContent">
 
-      <!-- 1 -->
+      <!-- 1 PopupCenter-->
       <div lang="en" @click="closeB">打开PopupCenter</div>
-      <Popup-Center 
-        @btnLeft="linksA" 
-        @btnRight="linksB" 
+      <popup-Center 
+        @btnA="linksA" 
+        @btnB="linksB"
+        @btnC="linksC" 
         @closeCenterBtn="closeB" 
         @oneBtn="oneBtn" 
         :open="OpenPopupCenter">
@@ -31,30 +32,31 @@
           </div>
         </div>
         <!-- 按钮 2个 -->
-        <div slot="btnA">left</div>
-        <div slot="btnB">right</div>
+        <div slot="btnA">btnA</div>
+        <div slot="btnB">btnB</div>
+        <div slot="btnC">btnC</div>
         <!-- oneBtn  1个 -->
         <div slot="oneBtn">
           <div class="oneBtn">关闭</div>
         </div>
-      </Popup-Center>
+      </popup-Center>
       <!-- 1 End-->
 
       
-      <!-- 2 -->
-      <div lang="en" @click="showPrompt">打开prompt</div>
-      <Prompt 
-        :open="OpenPrompt"
+      <!-- 2 notify-->
+      <div lang="en" @click="showNotify">打开Notify</div>
+      <notify 
+        :open="OpenNotify"
         :step="step" 
-        @toastColse="ColsePrompt"
+        @ColseNotify="ColseNotify"
         >
-        <p slot="prompt_info">{{ promptMsg }}</p>
-      </Prompt>
+        <p slot="notifyInfo">{{ NotifyMsg }}</p>
+      </notify>
 
 
-      <!-- 3 -->
+      <!-- 3 PopupDown-->
       <div lang="en" @click="PopupDown">打开PopupDown</div>
-      <Popup-Down
+      <popup-Down
         @PopupDownI="ClosePopupDown"
         :open="OpenPopupDwon"
       >
@@ -76,35 +78,35 @@
               <li>last--4444</li>
           </ul>
         </div>
-      </Popup-Down>
+      </popup-Down>
       <!-- 3 End -->
 
-      <!-- 4 -->
+      <!-- 4 PopupRight -->
       <div lang="en" @click="PopupRight">打开PopupRight</div>
 
-        <Popup-Right
+        <popup-Right
           :open="OpenPopupRight"
           @closeRightBtn="closeRight"
-        >
-          <div>111</div>
-          <div>222</div>
-        </Popup-Right>
+        > 
+          <div class="popupRight">
+            <div>111</div>
+            sdsdsdsd
+          </div>
+        </popup-Right>
 
         
     </div>
     <div class="appFooter">
-      <NavList />
+      <navList />
     </div>
   </div>
 </template>
 <script>
-import NavList from '@/pages/links/NavList'
-import Prompt from '@/pages/lib/Prompt'
-import PopUp from '@/pages/lib/PopUp'
-import PopupCenter from '@/pages/lib/PopupCenter'
-import PopupDown from '@/pages/lib/PopupDown'
-import PopupRight from '@/pages/lib/PopupRight'
-import PopupRight1 from '@/pages/lib/PopupRight1'
+import navList from '@/pages/links/NavList'
+import popupCenter from '@/pages/lib/PopupCenter'
+import popupDown from '@/pages/lib/PopupDown'
+import popupRight from '@/pages/lib/PopupRight'
+import notify from '@/pages/lib/Notify'
 export default {
   name: 'three',
   data() {
@@ -113,20 +115,23 @@ export default {
       promptState:false,
       OpenPopupDwon:false,
       OpenPopupRight:false,
-      promptMsg: '这里是错误提示！这里是错误提示！这里是错误提示！这里是错误提示！这里是错误提示！这里是错误提示！',
+      NotifyMsg: '这里是错误提示！这里是错误提示！这里是错误提示！这里是错误提示！这里是错误提示！这里是错误提示！',
 
 
-      OpenPrompt: false,
+      OpenNotify: false,
       step: 1000,
     }
   },
   methods: {
     // PopupCenter
     linksA() {
-      console.log("left的按钮")
+      console.log("btnA的按钮")
     },
     linksB() {
-      console.log("right的按钮")
+      console.log("btnB的按钮")
+    },
+    linksC() {
+      console.log("btnC的按钮")
     },
     closeB() {
       this.OpenPopupCenter = !this.OpenPopupCenter
@@ -138,12 +143,12 @@ export default {
     },
 
 
-    // prompt
-    showPrompt () {
-        this.OpenPrompt = true
+    // notify
+    showNotify () {
+        this.OpenNotify = true
     },
-    ColsePrompt() {
-        this.OpenPrompt = false
+    ColseNotify() {
+        this.OpenNotify = false
     },
 
 
@@ -166,14 +171,11 @@ export default {
     }
   },
   components: {
-    NavList,
-    PopUp,
-    Prompt,
-
-    PopupCenter,
-    PopupDown,
-    PopupRight,
-    PopupRight1,
+    navList,
+    popupCenter,
+    popupDown,
+    popupRight,
+    notify
   }
 }
 
@@ -230,7 +232,7 @@ export default {
 } 
 */
 
-.prompt{
+.notify{
   p{
     padding: 0 50 * $unit 0 10px;
     @include Highline(1);
@@ -266,5 +268,11 @@ ul.listUl{
     @include LineH(50)
     background: pink;
   }
+}
+.popupRight{
+  height: 1500px;
+  position: absolute;
+  width: 100%;
+  background: red;
 }
 </style>
