@@ -2,6 +2,7 @@
   <div class="appContainer">
     <div class="appHeader">
       衣箱
+      <i @click="testLinks">Test</i>
     </div>
     <div class="appContent">
 
@@ -123,6 +124,12 @@ export default {
     }
   },
   methods: {
+    // testlinks
+    testLinks(){
+      this.$router.push({
+        path: '/pages/Test'
+      })
+    },
     // PopupCenter
     linksA() {
       console.log("btnA的按钮")
@@ -275,4 +282,10 @@ ul.listUl{
   width: 100%;
   background: red;
 }
+.appHeader i{
+  right: 0;
+  position: absolute;
+  float: right;
+}
+
 </style>

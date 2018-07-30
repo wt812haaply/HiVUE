@@ -41,7 +41,7 @@ export default {
 			{
 				id: '005',
 				url: '/',
-				title: '首页'
+				title: '返回首页'
 			}]
 		}
 	},

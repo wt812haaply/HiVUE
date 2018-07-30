@@ -1,7 +1,5 @@
 <template>
 	<div>
-		<div style="width: 100%; height: 50px; background: RED"></div>
-		<Xiding></Xiding>
 		<ul>
 		    <router-link 
 		    	:to="{path: '/pages/' + item.url + item.tag}"
@@ -45,6 +43,12 @@ export default{
 				url: 'xiding/',
 				name: 'xiding',
 				tag: 'xiding'
+			},
+			{
+				id: '005',
+				url: 'demo/js/',
+				name: 'js',
+				tag: 'js'
 			}]
 		}
 	},

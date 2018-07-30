@@ -17,6 +17,9 @@ const Aa = () => import('@/pages/bus/a')
 const Xiding = () => import('@/pages/xiding/xiding')
 const AA = () => import('@/pages/xiding/AA')
 
+// demo
+const JS = () => import('@/pages/demo/js/js')
+
 Vue.use(Router)
 export default new Router({
   mode: 'history',
@@ -100,6 +103,11 @@ export default new Router({
       path: '/pages/xiding/AA',
       name: 'AA',
       component: AA
+    },
+    {
+      path: '/pages/demo/js/js',
+      name: 'js',
+      component: JS
     }
   ]
 })
