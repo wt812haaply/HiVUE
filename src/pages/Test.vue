@@ -49,6 +49,12 @@ export default{
 				url: 'demo/js/',
 				name: 'js',
 				tag: 'js'
+			},
+			{
+				id: '006',
+				url: 'tab/',
+				name: 'tab',
+				tag: 'tab'
 			}]
 		}
 	},

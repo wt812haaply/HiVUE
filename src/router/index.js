@@ -16,6 +16,7 @@ const SNE = () => import('@/pages/sticky/Sne')
 const Aa = () => import('@/pages/bus/a')
 const Xiding = () => import('@/pages/xiding/xiding')
 const AA = () => import('@/pages/xiding/AA')
+const Tab = () => import('@/pages/tab/tab')
 
 // demo
 const JS = () => import('@/pages/demo/js/js')
@@ -108,6 +109,11 @@ export default new Router({
       path: '/pages/demo/js/js',
       name: 'js',
       component: JS
+    },
+    {
+      path: '/pages/tab/tab',
+      name: 'tab',
+      component: Tab,
     }
   ]
 })
