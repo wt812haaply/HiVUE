@@ -2,10 +2,8 @@
   <div >
     <div style="height:200px;" class="mnm">1</div>
 
-
     <div class="auto_fixed" :class="auto_fixed">自动粘滞固定头部，需要一直展示的</div>
     <div class="auto_fixed_fake" :style="{display: auto_fixed.fixed ? 'block':'none'}"></div>
-
 
 
 

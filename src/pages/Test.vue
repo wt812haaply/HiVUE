@@ -13,7 +13,6 @@
 	</div>
 </template>
 <script>
-import Xiding from '@/pages/xiding/xiding'
 export default{
 	name:'test',
 	data () {
@@ -55,12 +54,15 @@ export default{
 				url: 'demo/tabs/',
 				name: 'tabs',
 				tag: 'demo'
+			},
+			{
+				id: '008',
+				url: 'demo/sticky/',
+				name: 'sticky',
+				tag: 'demo'
 			}]
 		}
 	},
-	components:{
-		Xiding
-	}
 }
 </script>
 <style scoped lang='scss'>

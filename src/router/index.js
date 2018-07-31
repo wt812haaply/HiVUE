@@ -27,7 +27,7 @@ const tabsDemo = () => import('@/pages/demo/tabs/demo')
 const Xiding = () => import('@/pages/demo/xiding/xiding')
 // bus 传值
 const Aa = () => import('@/pages/demo/bus/a')
-
+const Sticky = () => import('@/pages/demo/sticky/demo')
 Vue.use(Router)
 export default new Router({
   mode: 'history',
@@ -117,6 +117,11 @@ export default new Router({
       path: '/pages/demo/tabs/demo',
       name: 'demo',
       component: tabsDemo,
+    },
+    {
+      path: '/pages/demo/sticky/demo',
+      name: 'demo',
+      component: Sticky,
     }
   ]
 })
