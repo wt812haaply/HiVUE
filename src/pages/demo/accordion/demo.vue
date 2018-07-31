@@ -43,7 +43,7 @@
 import accordion from './accordion'
 import accordionItem from './accordionItem'
 export default {
-	name:'',
+	name:'demo',
 	data () {
 		return{
 

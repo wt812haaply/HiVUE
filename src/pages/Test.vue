@@ -20,12 +20,6 @@ export default{
 		return{
 			testList:[
 			{
-				id:'001',
-				url:'sticky/',
-				name:'sticky',
-				tag:'Sne'
-			},
-			{
 				id:'002',
 				url:'links/',
 				name:'links',
@@ -33,28 +27,34 @@ export default{
 			},
 			{
 				id:'003',
-				url:'bus/',
-				name:'bus',
+				url:'demo/bus/',
+				name:'bus传值',
 				tag:'a'
 
 			},
 			{
 				id: '004',
-				url: 'xiding/',
-				name: 'xiding',
+				url: 'demo/xiding/',
+				name: '吸顶',
 				tag: 'xiding'
 			},
 			{
 				id: '005',
 				url: 'demo/js/',
-				name: 'js',
+				name: 'split、join应用',
 				tag: 'js'
 			},
 			{
 				id: '006',
-				url: 'tab/',
-				name: 'tab',
-				tag: 'tab'
+				url: 'demo/accordion/',
+				name: '手风琴',
+				tag: 'demo'
+			},
+			{
+				id: '007',
+				url: 'demo/tabs/',
+				name: 'tabs',
+				tag: 'demo'
 			}]
 		}
 	},

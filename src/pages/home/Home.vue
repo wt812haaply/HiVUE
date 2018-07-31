@@ -5,7 +5,6 @@
     </div>
 
     <div class="appContent">
-    <div style="height:100px; line-height: 100px;" @click="abcd">stick</div>
     <!-- <div></div> -->
     <!-- <transition name="animated" enter-active-class="animated bounceOutLeft" leave-active-class="animated bounceOutRight">
       <div class="homItem" v-show="headMsg">
@@ -218,10 +217,6 @@ export default {
       console.log(data);
     },
 
-
-    abcd:function(){
-      window.location.href='/pages/sticky/Sne'
-    }
 
     // dakai:function(data){
     //   console.log(data);

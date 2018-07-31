@@ -12,14 +12,21 @@ const TwoA = () => import('@/pages/links/TwoA')
 const TwoB = () => import('@/pages/links/TwoB')
 const Three = () => import('@/pages/links/Three')
 const Four = () => import('@/pages/links/Four')
-const SNE = () => import('@/pages/sticky/Sne')
-const Aa = () => import('@/pages/bus/a')
-const Xiding = () => import('@/pages/xiding/xiding')
-const AA = () => import('@/pages/xiding/AA')
-const Tab = () => import('@/pages/tab/tab')
+
+
+
+
 
 // demo
 const JS = () => import('@/pages/demo/js/js')
+// 手风琴
+const Accordion = () => import('@/pages/demo/accordion/demo')
+// tabs
+const tabsDemo = () => import('@/pages/demo/tabs/demo')
+// 吸顶
+const Xiding = () => import('@/pages/demo/xiding/xiding')
+// bus 传值
+const Aa = () => import('@/pages/demo/bus/a')
 
 Vue.use(Router)
 export default new Router({
@@ -85,25 +92,16 @@ export default new Router({
       component: Four
     },
 
+    // demo
     {
-      path: '/pages/sticky/Sne',
-      name: 'sne',
-      component: SNE
-    },
-    {
-      path: '/pages/bus/a',
+      path: '/pages/demo/bus/a',
       name: 'a',
       component: Aa
     },
     {
-      path: '/pages/xiding/xiding',
+      path: '/pages/demo/xiding/xiding',
       name: 'xiding',
       component: Xiding
-    },
-    {
-      path: '/pages/xiding/AA',
-      name: 'AA',
-      component: AA
     },
     {
       path: '/pages/demo/js/js',
@@ -111,9 +109,14 @@ export default new Router({
       component: JS
     },
     {
-      path: '/pages/tab/tab',
-      name: 'tab',
-      component: Tab,
+      path: '/pages/demo/accordion/demo',
+      name: 'accordion',
+      component: Accordion,
+    },
+    {
+      path: '/pages/demo/tabs/demo',
+      name: 'demo',
+      component: tabsDemo,
     }
   ]
 })
