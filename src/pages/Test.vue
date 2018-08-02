@@ -33,9 +33,9 @@ export default{
 			},
 			{
 				id: '005',
-				url: 'demo/js/',
+				url: 'demo/splitOrjoin/',
 				name: 'split、join应用',
-				tag: 'js'
+				tag: 'split'
 			},
 			{
 				id: '006',

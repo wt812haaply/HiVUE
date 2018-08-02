@@ -2,10 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 const Test = () => import('@/pages/Test')
 
-//test project
+// project
 const Home = () => import('@/pages/home/Home')
 const HomeHeader = () => import('@/pages/home/components/Header')
-
 const One = () => import('@/pages/links/One')
 const Two = () => import('@/pages/links/Two')
 const TwoA = () => import('@/pages/links/TwoA')
@@ -15,18 +14,17 @@ const Four = () => import('@/pages/links/Four')
 
 
 
+// ！ demo
 
-
-// demo
-const JS = () => import('@/pages/demo/js/js')
+const splitDemo = () => import('@/pages/demo/splitOrjoin/split')
 // 手风琴
-const Accordion = () => import('@/pages/demo/accordion/demo')
+const accordionDemo = () => import('@/pages/demo/accordion/demo')
 // tabs
 const tabsDemo = () => import('@/pages/demo/tabs/demo')
 // bus 传值
-const Aa = () => import('@/pages/demo/bus/a')
-const Sticky = () => import('@/pages/demo/sticky/demo')
-
+const busDemo = () => import('@/pages/demo/bus/a')
+//sticky
+const stickyDemo = () => import('@/pages/demo/sticky/demo')
 // emit props
 const emitpropsDemo = () => import('@/pages/demo/emitprops/demo')
 
@@ -43,6 +41,7 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
+      redirect:'/pages/Test', //重定向 指定默认路由
       component: Home,
       meta: {
         title: "衣二三"
@@ -97,18 +96,18 @@ export default new Router({
     // demo
     {
       path: '/pages/demo/bus/a',
-      name: 'a',
-      component: Aa
+      name: 'bus',
+      component: busDemo,
     },
     {
-      path: '/pages/demo/js/js',
-      name: 'js',
-      component: JS
+      path: '/pages/demo/splitOrjoin/split',
+      name: 'splitOrjoin',
+      component: splitDemo,
     },
     {
       path: '/pages/demo/accordion/demo',
       name: 'accordion',
-      component: Accordion,
+      component: accordionDemo,
     },
     {
       path: '/pages/demo/tabs/demo',
@@ -118,7 +117,7 @@ export default new Router({
     {
       path: '/pages/demo/sticky/demo',
       name: 'sticky',
-      component: Sticky,
+      component: stickyDemo,
     },
     {
       path: '/pages/demo/emitprops/demo',
