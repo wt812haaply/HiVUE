@@ -60,6 +60,12 @@ export default{
 				url: 'demo/sticky/',
 				name: 'sticky',
 				tag: 'demo'
+			},
+			{
+				id: '009',
+				url: 'demo/emitprops/',
+				name: '子父传值',
+				tag: 'demo'
 			}]
 		}
 	},

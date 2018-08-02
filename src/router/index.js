@@ -28,6 +28,10 @@ const Xiding = () => import('@/pages/demo/xiding/xiding')
 // bus 传值
 const Aa = () => import('@/pages/demo/bus/a')
 const Sticky = () => import('@/pages/demo/sticky/demo')
+
+// emit props
+const emitpropsDemo = () => import('@/pages/demo/emitprops/demo')
+
 Vue.use(Router)
 export default new Router({
   mode: 'history',
@@ -115,13 +119,18 @@ export default new Router({
     },
     {
       path: '/pages/demo/tabs/demo',
-      name: 'demo',
+      name: 'tabs',
       component: tabsDemo,
     },
     {
       path: '/pages/demo/sticky/demo',
-      name: 'demo',
+      name: 'sticky',
       component: Sticky,
+    },
+    {
+      path: '/pages/demo/emitprops/demo',
+      name: 'emitprops',
+      component: emitpropsDemo
     }
   ]
 })
