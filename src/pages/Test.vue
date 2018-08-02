@@ -32,12 +32,6 @@ export default{
 
 			},
 			{
-				id: '004',
-				url: 'demo/xiding/',
-				name: '吸顶',
-				tag: 'xiding'
-			},
-			{
 				id: '005',
 				url: 'demo/js/',
 				name: 'split、join应用',
@@ -58,7 +52,7 @@ export default{
 			{
 				id: '008',
 				url: 'demo/sticky/',
-				name: 'sticky',
+				name: 'sticky吸顶',
 				tag: 'demo'
 			},
 			{

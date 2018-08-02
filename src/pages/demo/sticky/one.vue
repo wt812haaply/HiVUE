@@ -1,59 +1,63 @@
-<!-- 模板展示 -->
 <template>
-	<div>
-		one 1
-	</div>
+  <div>
+
+    <div class="auto_fixed" :class="auto_fixed">
+      <slot name="topName"></slot>
+    </div>
+    <div :style="{display: auto_fixed.fixed ? 'block':'none'}"></div>
+
+
+  </div>
 </template>
-
-<!-- 逻辑处理 -->
 <script>
-// 组件 import BScroll from 'better-scroll'
-// api import { orderList } from 'api/event'
 export default {
-	name:'',
-	data () {
-		return{
+  name: 'HelloWorld',
+  data() {
+    return {
+      auto_fixed: {
+        fixed: false
+      }
+    }
+  },
+  methods: {
+    onScroll() {
+      let scrolled = document.documentElement.scrollTop || document.body.scrollTop
+      let header_height = null
+      if (document.getElementsByClassName('demoItem')[0]) {
+        header_height = document.getElementsByClassName('demoItem')[0].offsetHeight
+      }
+      console.log('滚动的距离:' + scrolled, '头部的高度:' + header_height)
+      this.auto_fixed = {
+        auto_fixed: true,
+        fixed: scrolled >= header_height
+      }
+    }
+  },
+  mounted() {
+    this.$nextTick(function() {
+      window.addEventListener('scroll', this.onScroll)
+    })
+  }
 
-		}
-	},
-
-	// 组件
-	components:{
-
-	},
-
-	// 组件传值
-	props:[],
-
-	// 事件方法
-	methods: {
-
-	},
-
-	// 计算属性
-	computed: {
-
-	},
-
-	// 侦听属性
-	watch:{
-
-	},
-
-	
-	mounted(){
-
-	},
-
-	// 接口数据
-	created(){
-
-	},
 }
+
 </script>
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
 
+.auto_fixed {
+  height: 3em;
+  background: rgba(0, 0, 0, .4);
+  line-height: 3em;
+  text-align: center;
+}
 
-<!-- 样式处理 -->
-<style scoped lang='scss'>
-	
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 </style>
+</code>

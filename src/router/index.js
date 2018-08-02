@@ -23,8 +23,6 @@ const JS = () => import('@/pages/demo/js/js')
 const Accordion = () => import('@/pages/demo/accordion/demo')
 // tabs
 const tabsDemo = () => import('@/pages/demo/tabs/demo')
-// 吸顶
-const Xiding = () => import('@/pages/demo/xiding/xiding')
 // bus 传值
 const Aa = () => import('@/pages/demo/bus/a')
 const Sticky = () => import('@/pages/demo/sticky/demo')
@@ -101,11 +99,6 @@ export default new Router({
       path: '/pages/demo/bus/a',
       name: 'a',
       component: Aa
-    },
-    {
-      path: '/pages/demo/xiding/xiding',
-      name: 'xiding',
-      component: Xiding
     },
     {
       path: '/pages/demo/js/js',

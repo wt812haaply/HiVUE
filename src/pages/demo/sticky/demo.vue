@@ -1,26 +1,39 @@
 <!-- 模板展示 -->
 <template>
 	<div>
-		<Sticky/>
+		<div class="demoItem">
+			<div>222</div>
+		</div>
+
+		<sticky>
+			<div slot="topName">{{ demo.msg }}</div>
+		</sticky>
+
+		<div class="content">
+       		<div lang="en">111</div>
+    	</div>
+
 	</div>
 </template>
 
 <!-- 逻辑处理 -->
 <script>
-import Sticky from './one'
+import sticky from './one'
 // 组件 import BScroll from 'better-scroll'
 // api import { orderList } from 'api/event'
 export default {
 	name:'demo',
 	data () {
 		return{
-
+			demo:{
+				msg:'自动粘滞固定头部'
+			}
 		}
 	},
 
 	// 组件
 	components:{
-		Sticky,
+		sticky,
 	},
 
 	// 组件传值
@@ -56,5 +69,15 @@ export default {
 
 <!-- 样式处理 -->
 <style scoped lang='scss'>
-	
+.demoItem{
+	height: auto;
+	background: #eee;
+	> div{
+		height: 500px;
+	}
+}
+.content{
+	height: 1500px;
+	background: #C6FFE9;
+}	
 </style>
