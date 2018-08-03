@@ -54,7 +54,6 @@ export default {
   line-height: 45 * $unit;
 }
 .recCont{
-  /* padding-bottom: 20px; */
 }
 .recContList {
   margin: 0 10px;

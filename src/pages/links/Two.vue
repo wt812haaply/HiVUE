@@ -51,7 +51,6 @@ export default {
   computed: {
     getUrl() {
       return this.imgData[this.$route.path];
-      console.log(this.$route.path);
     }
   },
   created() {
@@ -66,6 +65,9 @@ export default {
 
 </script>
 <style scoped lang='scss'>
+#app > {
+   @include layout(43,50)
+}
 .Two {
   display: flex;
   justify-content: space-between;

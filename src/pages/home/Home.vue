@@ -237,12 +237,14 @@ export default {
 </script>
 <!-- sass -->
 <style scoped lang='scss'>
+#app > {
+   @include layout(43,50)
+}
 .homItem {
   @include center(200);
   z-index: 9;
   .testImg {
     @include WH(200);
-    /* @include imgP(200); */
     padding-bottom: 92.3333%;
   }
 }

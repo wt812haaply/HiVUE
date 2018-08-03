@@ -41,7 +41,7 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      redirect:'/pages/Test', //重定向 指定默认路由
+      //redirect:'/pages/Test', //重定向 指定默认路由
       component: Home,
       meta: {
         title: "衣二三"

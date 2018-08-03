@@ -24,6 +24,8 @@ export default ({
 })
 </script>
 <style scoped lang='scss'>
-
+#app > {
+   @include layout(43,50)
+}
 
 </style>

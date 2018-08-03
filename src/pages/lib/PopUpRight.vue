@@ -30,7 +30,6 @@ props: ['open'],
 <style scoped lang='scss'>
 
 .rightCont {
-  /* @include center(300,100); */
 }
 .rightCont > .mask {
   @include mask

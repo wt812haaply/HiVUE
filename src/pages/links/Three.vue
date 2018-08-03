@@ -188,6 +188,9 @@ export default {
 
 </script>
 <style scoped lang='scss'>
+#app > {
+   @include layout(43,50)
+}
 .banner {
   background: blue;
   color: #fff;
@@ -224,7 +227,7 @@ export default {
 }
 
 
-/* !
+/*
 	deep 优先 清楚ul.popBtn 的样式
 /deep/ ul.popBtn{
   width: 100%;
