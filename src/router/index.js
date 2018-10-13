@@ -15,7 +15,6 @@ const Four = () => import('@/pages/links/Four')
 
 
 // ！ demo
-
 const splitDemo = () => import('@/pages/demo/splitOrjoin/split')
 // 手风琴
 const accordionDemo = () => import('@/pages/demo/accordion/demo')
@@ -27,7 +26,8 @@ const busDemo = () => import('@/pages/demo/bus/a')
 const stickyDemo = () => import('@/pages/demo/sticky/demo')
 // emit props
 const emitpropsDemo = () => import('@/pages/demo/emitprops/demo')
-
+//scroller
+const scrollerDemo = () =>import('@/pages/demo/scroller/demo');
 Vue.use(Router)
 export default new Router({
   mode: 'history',
@@ -123,6 +123,11 @@ export default new Router({
       path: '/pages/demo/emitprops/demo',
       name: 'emitprops',
       component: emitpropsDemo
+    },
+    {
+      path: '/pages/demo/scroller/demo',
+      name: 'scroller',
+      component: scrollerDemo
     }
   ]
 })

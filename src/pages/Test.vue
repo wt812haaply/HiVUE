@@ -60,7 +60,14 @@ export default{
 				url: 'demo/emitprops/',
 				name: '子父传值',
 				tag: 'demo'
-			}]
+			},
+			{
+				id: '010',
+				url: 'demo/scroller/',
+				name: '下拉刷新',
+				tag: 'demo'
+			}
+			]
 		}
 	},
 }

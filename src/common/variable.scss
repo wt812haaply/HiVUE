@@ -2,13 +2,12 @@
 * @Author: nagy.wang
 * @Date:   2018-07-01 14:58:13
 * @Last Modified by:   nagy.wang
-* @Last Modified time: 2018-08-03 14:44:17
+* @Last Modified time: 2018-08-06 17:52:41
 */
 
 $unit:1rem/18.75;
 $img:100%;
 @mixin transform($w){
-  /* transform */
   transform: translateX($w) translateY($w);
 }
 
@@ -166,7 +165,44 @@ $img:100%;
 /*
   PingFang SC font-weight
 */
-
+@mixin font(){
+  @each $name, $weight in (u,100)     /* 极细体 */
+                          (t,200)     /* 纤细体 */
+                          (l,300)     /* 细体   */
+                          (r,400)     /* 常规体 */
+                          (m,500)     /* 中黑体 */     
+                          (s,600)     /* 中粗体 */
+                          (b,700)     /* 粗体   */
+  {
+    .font-#{$name}{
+       font-weight: $weight;
+    }
+  }
+}
+/*  */
+@mixin font($font-weight){
+  @if $font-weight == 'u'{
+    font-weight: 100;
+  }
+  @else if $font-weight == 't'{
+    font-weight: 200;
+  }
+  @else if $font-weight == 'l'{
+    font-weight: 300;
+  }
+  @else if $font-weight == 'r'{
+    font-weight: 400;
+  }
+  @else if $font-weight == 'm'{
+    font-weight: 500;
+  }
+  @else if $font-weight == 's'{
+    font-weight: 600;
+  }
+  @else if $font-weight == 'b'{
+    font-weight: 700;
+  }
+}
 
 
 /*

@@ -14,7 +14,6 @@ export default {
 </script>
 <style>
 body {
-  /* background: #fff; */
   font-family: 'PingFang SC'
 }
 
@@ -27,6 +26,7 @@ i {
 }
 
 #app {
+  background: #fff;
   height: 100%;
 }
 

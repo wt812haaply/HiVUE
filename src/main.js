@@ -3,11 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import VueAwesomeSwiper from 'vue-awesome-swiper'
+
+// 样式
 import iphoneX from '@/common/iphoneX.css'
 import Animate from '@/common/animate.css'
+
 // swiper
-import 'swiper/dist/css/swiper.css'
+// import 'swiper/dist/css/swiper.css'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 import {swiper, swiperSlide} from 'vue-awesome-swiper'
 
 
@@ -18,12 +21,20 @@ Vue.use(VueLazyLoad,{
     loading:'https://file.digitaling.com/eImg/uimages/20160802/1470137310487029.gif'
 })
 
+// scroller
+import VueScroller from 'vue-scroller'
+Vue.use(VueScroller)
 
+//store
 import store from './store'
+
+//bus
 Vue.prototype.bus = new Vue()
+
 // title
 import VueWechatTitle from 'vue-wechat-title'
 Vue.use(VueWechatTitle)
+
 // fastClick
 import fastClick from 'fastClick'
 Vue.config.productionTip = false

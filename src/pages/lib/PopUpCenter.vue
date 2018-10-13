@@ -1,5 +1,5 @@
 <template>
-  <transition>
+  <transition name="dialog-slide" appear>
     <div class="PopupCenter" v-if="open">
       <div class="wtt">
         <div class="cont">
@@ -61,9 +61,44 @@ props: ['open'],
 </script>
 
 <style scoped lang='scss'>
+.dialog-slide-enter-active {
+    animation: zoomIn1 1s;
+  }
+  .dialog-slide-leave-active {
+    animation: zoomIn1 .5s reverse;
+  }
+  .dialog-slide-enter-active .yi23-dialog {
+    animation: zoomIn 1s;
+  }
+  .dialog-slide-leave-active .yi23-dialog{
+    animation: zoomIn .5s reverse;
+  }
+  @keyframes zoomIn1 {
+    from {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+  @keyframes zoomIn {
+    from {
+      transform: translate(-50%,-50%) scale(0);
+    }
+
+    50% {
+      transform: translate(-50%,-50%) scale(0);
+    }
+  }
+
+
+
+
 .PopupCenter {
   background: red;
 }
+
 .item {
   padding: 0 10px;
 }

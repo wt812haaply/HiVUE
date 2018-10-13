@@ -78,6 +78,7 @@ export default {
 
 .navListActive {
   background: blue;
+  color: #fff;
 }
 
 .leftImg {

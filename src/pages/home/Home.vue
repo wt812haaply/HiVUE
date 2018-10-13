@@ -208,6 +208,58 @@ export default {
           addr: '北京',
           desc: null,
         },
+      },{
+        id: '0006',
+        listCon: {
+          src: 'http://tu.yi23.net/Thumbs/41-20180629_105207-1530240727710-1.jpg!750',
+          name: '金色流苏礼服',
+          comment: '1000',
+          money: '281',
+          addr: '北京',
+          desc: 'BIZZCUTAulenti了说的客服',
+        },
+      }, {
+        id: '0007',
+        listCon: {
+          src: 'http://tu.yi23.net/Thumbs/41-20180702_170259-1530522179742-1.jpg!750',
+          name: '浅绿色抹胸礼服',
+          comment: '10',
+          money: '259',
+          addr: '朝阳',
+          desc: null,
+        },
+      }, {
+        id: '0008',
+        listCon: {
+          src: 'http://tu.yi23.net/Thumbs/586-20180630_192956-1530358196975-1.jpg!750',
+          name: '酒红色金色亮片娃娃领礼服酒红色金色亮片娃娃领\礼服',
+          comment: '30',
+          money: '300',
+          addr: '北京',
+          desc: null,
+        },
+
+      }, {
+        id: '0009',
+        listCon: {
+          src: 'http://tu.yi23.net/Thumbs/586-20180630_192956-1530358196975-1.jpg!750',
+          name: '酒红色金色亮片娃娃领礼服酒红色金色亮片娃娃领礼服',
+          comment: '30',
+          money: '300',
+          addr: '北京',
+          desc: '快结束了尽量减少来访记录设计费',
+        },
+
+      }, {
+        id: '0010',
+        listCon: {
+          src: 'http://tu.yi23.net/Thumbs/586-20180630_192956-1530358196975-1.jpg!750',
+          name: '酒红色金色亮片娃娃领礼服酒红色金色亮片娃娃领礼服',
+          comment: '30',
+          money: '300',
+          addr: '北京',
+          desc: null,
+        },
       }]
     }
   },

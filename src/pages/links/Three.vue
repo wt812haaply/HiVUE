@@ -112,7 +112,8 @@ export default {
   name: 'three',
   data() {
     return {
-      OpenPopupCenter: false,
+      // OpenPopupCenter: false,
+      OpenPopupCenter: true,
       promptState:false,
       OpenPopupDwon:false,
       OpenPopupRight:false,
