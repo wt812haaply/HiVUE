@@ -74,7 +74,12 @@ export default {
 }
 
 .left,
-.right {}
+.right {
+
+}
+.right{
+  width: 200 * $unit;
+}
 
 .navListActive {
   background: blue;

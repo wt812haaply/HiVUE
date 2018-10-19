@@ -55,28 +55,32 @@ export default new Router({
     {
       path: '/pages/links/One',
       name: 'one',
-      component: One
+      component: One,
+      meta: {
+        title: '111'
+      }
     },
     {
       path: '/pages/links/Two',
       name: 'two',
       component: Two,
       redirect: "/pages/links/Two/TwoB",
-      meta: {
-        title: "哈哈"
-      },
+   
       children: [{
                   path: 'TwoA',
                   name: 'twoA',
                   component: TwoA,
                   meta: {
-                    title: "衣二三"
+                    title: "衣二三1"
                   },
                 },
                 {
                   path: 'TwoB',
                   name: 'twoB',
-                  component: TwoB
+                  component: TwoB,
+                  meta: {
+                    title: "衣二三2"
+                  },
                 }]
     },
     {
@@ -90,7 +94,10 @@ export default new Router({
     {
       path: '/pages/links/Four',
       name: 'four',
-      component: Four
+      component: Four,
+      meta: {
+        title: '444'
+      }
     },
 
     // demo
