@@ -160,7 +160,7 @@ export default {
         id: '0001',
         listCon: {
           src: 'http://tu.yi23.net/Thumbs/41-20180629_105207-1530240727710-1.jpg!750',
-          name: '金色流苏礼服',
+          name: '好好-金色流苏礼服',
           comment: '1000',
           money: '281',
           addr: '北京',
