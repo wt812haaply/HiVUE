@@ -1,8 +1,8 @@
 <!-- 模板展示 -->
 <template>
 	<div>
-		下面是
-		<hr>	
+		<h2>下面是</h2>
+		<hr>
 		<p lang="en">one的信息</p>
 		<p>{{get.onemsg }}</p>
 		<p>{{ get.oneclass}}</p>
@@ -59,7 +59,7 @@ export default {
 			this.get.oneclass = className
 		},
 
-		// 
+		//
 		getTwo(data,className){
 			console.log(data,className)
 			this.get.twomsg = data;

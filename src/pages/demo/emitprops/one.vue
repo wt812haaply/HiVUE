@@ -47,7 +47,7 @@ export default {
 
 	//一进页面先执行
 	mounted(){
-		this.oneclick()
+//		this.oneclick()
 	},
 
 	// 接口数据
@@ -60,9 +60,9 @@ export default {
 
 <!-- 样式处理 -->
 <style scoped lang='scss'>
-.one{
-	border: 1px red solid;
-}
+  .one{
+    border: 1px blue solid;
+  }
 button{
 	margin-top: 40px;
 	display: block;

@@ -46,7 +46,7 @@ export default {
 
 	//一进页面先执行
 	mounted(){
-		this.twoclick();
+//		this.twoclick();
 	},
 
 	// 接口数据
