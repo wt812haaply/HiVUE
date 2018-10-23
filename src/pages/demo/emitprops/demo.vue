@@ -1,7 +1,7 @@
 <!-- 模板展示 -->
 <template>
 	<div>
-		<h2>下面是</h2>
+		<h2>下面是111</h2>
 		<hr>
 		<p lang="en">one的信息</p>
 		<p>{{get.onemsg }}</p>
