@@ -29,6 +29,11 @@ Vue.use(VueScroller)
 //store
 import store from './store'
 
+
+//axios
+import axios from 'axios';
+Vue.prototype.axios = axios;
+
 //bus
 Vue.prototype.bus = new Vue()
 
@@ -46,6 +51,7 @@ Vue.use(VueAwesomeSwiper)
 new Vue({
   el: '#app',
   router,
+  axios,
   store,
   components: { App, swiper, swiperSlide },
   template: '<App/>'
