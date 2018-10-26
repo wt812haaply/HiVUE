@@ -1,6 +1,11 @@
 <!-- 模板展示 -->
 <template>
   <div>
+    <!--求和-->
+    <template>
+      <h1 @click="summation()">click</h1>
+    </template>
+
     <template>
       <!--filter-->
       <div>{{ evenNumbers }}</div>
@@ -10,6 +15,8 @@
       </ul>
       <br>
     </template>
+
+
 
 
     <template>
@@ -57,11 +64,15 @@
     </template>
 
 
+
   </div>
 </template>
 
 <!-- 逻辑处理 -->
 <script>
+
+  //引用方法地址
+  import utils  from '@/common/js/utils.js'
 
   export default {
     name:'',
@@ -74,8 +85,8 @@
         stringArr:['10','12','23','44','42'],
         arrayString:['aaa','bbb','ccc','ddd','eee','aabb','bbcc'],
         arrOne:'',
-        pop:'',
       }
+
     },
 
     // 组件
@@ -88,6 +99,8 @@
 
     // 事件方法
     methods: {
+
+
 
       even (numbers) {
         return numbers.filter(function (number) {
@@ -129,10 +142,28 @@
       getop(){
         let op = this.arrOne;
         return op.filter((x, index,self)=>self.indexOf(x)===index)
+      },
+
+      //点击求和
+      summation(){
+        //引用公用方法getName
+        console.log(utils.getSummation(1,5))
+      },
+
+      whatThis(){
+        // 1 ios, 2 android, 3 wechart, 4 alipay
+        let clientType = utils.getClientType();
+        if(clientType == 1){
+          console.log('ios')
+        } else if( clientType == 2){
+          console.log('android')
+        } else if(clientType == 3){
+          console.log('wechat')
+        } else if( clientType == 4){
+          console.log('alipay')
+        }
+
       }
-
-
-
 
     },
 
@@ -163,12 +194,14 @@
 
     //一进页面先执行
     mounted(){
+
     },
 
     // 接口数据
     created(){
       let arr1 = [1,24,5,-1,-22,126,78,9,21,2,1,2,1,4,325,14]
       this.getArrSort(arr1)
+      this.whatThis()
     },
   }
 </script>

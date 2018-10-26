@@ -1,12 +1,13 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+
 import Vue from 'vue'
 import App from './App'
 import router from './router'
 
 // 样式
-import iphoneX from '@/common/style/iphoneX.css'
-import Animate from '@/common/style/animate.css'
+// import iphoneX from '@/common/style/iphoneX.css'
+// import Animate from '@/common/style/animate.css'
 
 // swiper
 // import 'swiper/dist/css/swiper.css'
