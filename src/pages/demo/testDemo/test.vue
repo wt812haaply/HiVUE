@@ -8,14 +8,7 @@
       <ul>
         <li v-for="item in even(numbers)">{{ item }}</li>
       </ul>
-
-
-
-
       <br>
-
-
-
     </template>
 
 
@@ -35,7 +28,6 @@
       </div>
     </template>
 
-
     <template>
       <h2>过滤不符合项</h2>
       <p>{{stringArr}}</p>
@@ -43,7 +35,6 @@
         {{filterNoConformity(stringArr,'2')}}
       </div>
     </template>
-
 
     <template>
       <h2>遍历数组</h2>
@@ -58,7 +49,13 @@
         {{arrOne}}
       </div>
     </template>
-      {{getop()}}
+
+    <template>
+      <h2>获取arrOne数据 再去重</h2>
+      <p>{{arrOne}}</p>
+      <div>{{getop()}}</div>
+    </template>
+
 
   </div>
 </template>
@@ -170,7 +167,7 @@
 
     // 接口数据
     created(){
-      let arr1 = [1,24,5,6,78,9,21,2,1,2,1,4,32,536,47,89,0,43,25,14]
+      let arr1 = [1,24,5,-1,-22,126,78,9,21,2,1,2,1,4,325,14]
       this.getArrSort(arr1)
     },
   }
@@ -186,7 +183,7 @@
   }
   h2{
     font-size:14 * $unit;
-    margin-top:20 * $unit ;
+    margin-top:20 * $unit;
     color:rgba(0,0,0,.5)
   }
 </style>

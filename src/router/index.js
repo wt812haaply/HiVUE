@@ -143,7 +143,7 @@ export default new Router({
       name:'testDemo',
       component: testDemo,
       meta: {
-        title: '测试'
+        title: '衣二三'
       }
     },
   ]

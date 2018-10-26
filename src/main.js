@@ -5,8 +5,8 @@ import App from './App'
 import router from './router'
 
 // 样式
-import iphoneX from '@/common/iphoneX.css'
-import Animate from '@/common/animate.css'
+import iphoneX from '@/common/style/iphoneX.css'
+import Animate from '@/common/style/animate.css'
 
 // swiper
 // import 'swiper/dist/css/swiper.css'
