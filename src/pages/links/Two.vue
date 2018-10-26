@@ -28,7 +28,7 @@
   </div>
 </template>
 <script>
-import navList from '@/pages/links/NavList'
+import navList from '@/pages/components/NavList'
 export default {
   name: 'two',
   data() {

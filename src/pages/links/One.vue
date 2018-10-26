@@ -13,7 +13,7 @@
   </div>
 </template>
 <script>
-import navList from '@/pages/links/NavList'
+import navList from '@/pages/components/NavList'
 import homePopUp from '@/pages/home/components/PopUp'
 export default {
   name: 'one',

@@ -8,12 +8,12 @@
 
       <!-- 1 PopupCenter-->
       <div lang="en" @click="closeB">打开PopupCenter</div>
-      <popup-Center 
-        @btnA="linksA" 
+      <popup-Center
+        @btnA="linksA"
         @btnB="linksB"
-        @btnC="linksC" 
-        @closeCenterBtn="closeB" 
-        @oneBtn="oneBtn" 
+        @btnC="linksC"
+        @closeCenterBtn="closeB"
+        @oneBtn="oneBtn"
         :open="OpenPopupCenter">
         <div slot="banner">
           <div class="banner">
@@ -43,12 +43,12 @@
       </popup-Center>
       <!-- 1 End-->
 
-      
+
       <!-- 2 notify-->
       <div lang="en" @click="showNotify">打开Notify</div>
-      <notify 
+      <notify
         :open="OpenNotify"
-        :step="step" 
+        :step="step"
         @ColseNotify="ColseNotify"
         >
         <p slot="notifyInfo">{{ NotifyMsg }}</p>
@@ -88,14 +88,14 @@
         <popup-Right
           :open="OpenPopupRight"
           @closeRightBtn="closeRight"
-        > 
+        >
           <div class="popupRight">
             <div>111</div>
             sdsdsdsd
           </div>
         </popup-Right>
 
-        
+
     </div>
     <div class="appFooter">
       <navList />
@@ -103,7 +103,7 @@
   </div>
 </template>
 <script>
-import navList from '@/pages/links/NavList'
+import navList from '@/pages/components/NavList'
 import popupCenter from '@/pages/lib/PopupCenter'
 import popupDown from '@/pages/lib/PopupDown'
 import popupRight from '@/pages/lib/PopupRight'
@@ -240,7 +240,7 @@ export default {
     text-align: center;
     @include LineH(0)
   }
-} 
+}
 */
 
 .notify{

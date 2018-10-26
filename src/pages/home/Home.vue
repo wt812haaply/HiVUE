@@ -27,7 +27,7 @@
 </template>
 <!-- js -->
 <script>
-import navList from '@/pages/links/NavList'
+import navList from '@/pages/components/NavList'
 import homeHeader from './components/Header'
 import homeSwiper from './components/Swiper'
 import homeIcons from './components/Icons'

@@ -1,9 +1,12 @@
 <!-- 模板展示 -->
 <template>
   <div>
+    <smallLoading/>
+
     <!--求和-->
     <template>
       <h1 @click="summation()">click</h1>
+      <div>{{ ret }}</div>
     </template>
 
     <template>
@@ -65,6 +68,8 @@
 
 
 
+
+
   </div>
 </template>
 
@@ -73,6 +78,7 @@
 
   //引用方法地址
   import utils  from '@/common/js/utils.js'
+ import smallLoading from '../../components/smallLoading'
 
   export default {
     name:'',
@@ -85,13 +91,14 @@
         stringArr:['10','12','23','44','42'],
         arrayString:['aaa','bbb','ccc','ddd','eee','aabb','bbcc'],
         arrOne:'',
+        ret:''
       }
 
     },
 
     // 组件
     components:{
-
+     smallLoading,
     },
 
     // 组件传值
@@ -147,7 +154,8 @@
       //点击求和
       summation(){
         //引用公用方法getName
-        console.log(utils.getSummation(1,5))
+        this.ret = utils.getSummation(1,10)
+        console.log(utils.getSummation(1,10))
       },
 
       whatThis(){

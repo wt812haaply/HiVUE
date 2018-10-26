@@ -1,10 +1,10 @@
 <template>
 	<div>
 		<ul>
-			<router-link 
+			<router-link
 				tag="li"
-				:to="item.url" 
-				v-for="(item,index) in links" 
+				:to="item.url"
+				v-for="(item,index) in links"
 				:key="index">
 					{{item.title}}
 			</router-link>
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-	
+
 export default {
 	name: 'navList',
 	data (){
@@ -52,7 +52,7 @@ export default {
 	// 		})
 	// 	}
 	// },
-	methods:{	
+	methods:{
 	},
 	computed: {
 	}

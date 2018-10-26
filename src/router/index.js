@@ -41,6 +41,19 @@ export default new Router({
       component: Test
     },
     {
+      path:'*' ,
+      redirect:(to)=>{
+        if(to.path === '/hello/hello'){
+          return {
+            path: '/',
+            query: to.query
+          }
+        }else{
+          return '/pages/Test'
+        }
+      }
+    },
+    {
       path: '/',
       name: 'Home',
       //redirect:'/pages/Test', //重定向 指定默认路由
