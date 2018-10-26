@@ -5,8 +5,6 @@
     <br>
     <div v-html="newTxt"></div>
     <br>
-
-
     <hr>
     <div> {{ _arrayOne }}</div>
     <div> {{ _arrayJoin }}</div>
@@ -54,12 +52,14 @@ export default {
   },
 
   methods: {
+
     _arrayTwo(){
         console.log('111')
         this.testArryTwo = this.test.array.split(',')
     }
   },
   computed: {
+
     _arrayOne(){
       let array = this.test.array
     },
@@ -93,6 +93,12 @@ export default {
   // 组件
   components: {
 
+  },
+  watch: {
+
+  },
+  //一进页面先执行
+  mounted(){
   },
   props: [],
 

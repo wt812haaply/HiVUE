@@ -1,12 +1,12 @@
 <template>
 	<div>
 		<ul>
-		    <router-link 
+		    <router-link
 		    	:to="{path: '/pages/' + item.url + item.tag}"
 		    	tag="li"
-		    	v-for="(item,index) in testList" 
+		    	v-for="(item,index) in testList"
 		    	:key="item.id"
-		    	> 
+		    	>
 		    	{{ item.name}}
 			</router-link>
 		</ul>
@@ -22,7 +22,7 @@ export default{
 				id:'002',
 				url:'links/',
 				name:'links',
-				tag:'One'	
+				tag:'One'
 			},
 			{
 				id:'003',
@@ -66,7 +66,12 @@ export default{
 				url: 'demo/scroller/',
 				name: '下拉刷新',
 				tag: 'demo'
-			}
+			}, {
+			  id:'0011',
+          url:'demo/testDemo/',
+          name:'测试',
+          tag:'test'
+        }
 			]
 		}
 	},

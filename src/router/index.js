@@ -27,7 +27,9 @@ const stickyDemo = () => import('@/pages/demo/sticky/demo')
 // emit props
 const emitpropsDemo = () => import('@/pages/demo/emitprops/demo')
 //scroller
-const scrollerDemo = () =>import('@/pages/demo/scroller/demo');
+const scrollerDemo = () => import('@/pages/demo/scroller/demo')
+//testDemo
+const testDemo = () => import('@/pages/demo/testDemo/test')
 Vue.use(Router)
 export default new Router({
   mode: 'history',
@@ -65,7 +67,7 @@ export default new Router({
       name: 'two',
       component: Two,
       redirect: "/pages/links/Two/TwoB",
-   
+
       children: [{
                   path: 'TwoA',
                   name: 'twoA',
@@ -135,6 +137,14 @@ export default new Router({
       path: '/pages/demo/scroller/demo',
       name: 'scroller',
       component: scrollerDemo
-    }
+    },
+    {
+      path:'/pages/demo/testDemo/test',
+      name:'testDemo',
+      component: testDemo,
+      meta: {
+        title: '测试'
+      }
+    },
   ]
 })
