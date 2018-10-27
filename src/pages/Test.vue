@@ -13,7 +13,6 @@
 	</div>
 </template>
 <script>
-import { baiduApi } from '@/api/baidu';
 export default{
 	name:'test',
 	data () {
@@ -85,11 +84,6 @@ export default{
 //      });
 //
 //    }
-    baidu(){
-      baiduApi().then((res) =>{
-        console.log(res)
-      })
-    }
 
   },
   // 接口数据
