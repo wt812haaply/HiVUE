@@ -19,10 +19,15 @@ module.exports = {
         target: 'http://baike.baidu.com/api/',
         changeOrigin: true
       },
+      '/satinApi':{
+        target: 'https://www.apiopen.top',
+        changeOrigin: true
+      },
       '/satinGodApi':{
         target: 'https://www.apiopen.top',
         changeOrigin: true
-      }
+      },
+
 
 
     },

@@ -17,6 +17,13 @@ export default {
     })
   },
 
+  xiaoshuoApi1() {
+    let urls = config.info
+    return axios.get(urls).then(function(res) {
+      return Promise.resolve(res)
+    })
+  },
+
 
 
 

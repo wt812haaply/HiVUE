@@ -278,9 +278,20 @@ export default {
         this.haha = res.key;
       })
 
-      baidu.xiaoshuoApi().then((res) =>{
+      let info = {
+        type:1,
+        page:1
+      }
+      baidu.xiaoshuoApi(info).then((res) =>{
         console.log(res)
       })
+
+      baidu.xiaoshuoApi1(info).then((res) =>{
+        console.log(res)
+      })
+
+
+
 
 
     },
