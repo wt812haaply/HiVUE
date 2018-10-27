@@ -278,26 +278,10 @@ export default {
         this.haha = res.key;
       })
 
+
+
     },
-//    getHeadMsg:function(data){
-//      this.headMsg = data;
-//      console.log(data);
-//    },
 
-
-    // dakai:function(data){
-    //   console.log(data);
-    // },
-    // getMsg: function(data) {
-    //   this.lieksMsg = data;
-    //   let hh = this.lieksMsg;
-    //   if (hh) {
-    //     console.log(this.lieksMsg)
-    //     hh = hh + '+111';
-    //     this.length = '-------' + this.lieksMsg.length
-    //     console.log(this.lieksMsg.length)
-    //   }
-    // },
   },
   created(){
     this.baidu()

@@ -4,12 +4,6 @@ import config from './config';
 
 
 
-// export function baiduApi() {
-//   console.log(config.baiduApi)
-//   return axios.get(config.baiduApi).then((res) => {
-//     return Promise.resolve(res.data)
-//   })
-// }
 
 export default {
 
@@ -23,11 +17,5 @@ export default {
 
 
 
-  // baiduApi(){
-  //   let abc = config.baiduApi
-  //   return axios.get(abc).then((res) => {
-  //     return Promise.resolve(res.data)
-  //   })
-  // }
 }
 
