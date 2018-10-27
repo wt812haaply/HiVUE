@@ -89,7 +89,6 @@ export default{
   // 接口数据
   created(){
 
-      this.baidu()
   },
 }
 </script>
