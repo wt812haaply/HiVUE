@@ -23,12 +23,12 @@
       </div>
     </div>
     <div class="appFooter">
-      <NavList />
+      <navList />
     </div>
   </div>
 </template>
 <script>
-import NavList from '@/pages/links/NavList'
+import navList from '@/pages/components/NavList'
 export default {
   name: 'two',
   data() {
@@ -51,7 +51,6 @@ export default {
   computed: {
     getUrl() {
       return this.imgData[this.$route.path];
-      console.log(this.$route.path);
     }
   },
   created() {
@@ -59,23 +58,32 @@ export default {
     console.log(this.$route.path);
   },
   components: {
-    NavList,
+    navList,
   },
 
 }
 
 </script>
 <style scoped lang='scss'>
+#app > {
+   @include layout(43,50)
+}
 .Two {
   display: flex;
   justify-content: space-between;
 }
 
 .left,
-.right {}
+.right {
+
+}
+.right{
+  width: 200 * $unit;
+}
 
 .navListActive {
   background: blue;
+  color: #fff;
 }
 
 .leftImg {

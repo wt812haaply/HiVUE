@@ -94,7 +94,6 @@ export default {
     display: inline-block;
     margin: 16px 0 0 0;
     line-height: 22px;
-    /* @include Highline(1); */
     font-size: 10 * $unit;
   }
 }

@@ -10,7 +10,27 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/leaf': {
+        target: 'http://testwapi.95vintage.com/',
+        changeOrigin: true
+      },
+      '/openapi':{
+        target: 'http://baike.baidu.com/api/',
+        changeOrigin: true
+      },
+      '/satinApi':{
+        target: 'https://www.apiopen.top',
+        changeOrigin: true
+      },
+      '/satinGodApi':{
+        target: 'https://www.apiopen.top',
+        changeOrigin: true
+      },
+
+
+
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
@@ -51,7 +71,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: '//zaole.net/dist/',
 
     /**
      * Source Maps

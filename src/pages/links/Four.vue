@@ -7,23 +7,25 @@
       <div style="height:1500px">1111</div>
     </div>
     <div class="appFooter">
-      <NavList />
+      <navList />
     </div>
   </div>
 </template>
 <script>
-import NavList from '@/pages/links/NavList'
+import navList from '@/pages/components/NavList'
 export default ({
   name: 'four',
   data() {
     return {}
   },
   components: {
-    NavList
+    navList
   }
 })
 </script>
 <style scoped lang='scss'>
-
+#app > {
+   @include layout(43,50)
+}
 
 </style>

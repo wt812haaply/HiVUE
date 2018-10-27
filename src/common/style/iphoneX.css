@@ -2,7 +2,7 @@
 * @Author: nagy.wang
 * @Date:   2018-07-01 14:59:16
 * @Last Modified by:   nagy.wang
-* @Last Modified time: 2018-07-13 16:33:23
+* @Last Modified time: 2018-07-28 14:35:29
 */
 /* iphoneX */
 
@@ -43,8 +43,12 @@
   }
 
   /*导航操作栏上移*/
-  .bottom-menu-fixed {
-    bottom: 34px;
+  .bottom-menu-fixed{
+    bottom: 34px !important;
+  }
+
+  .bottomIphoneX{
+    bottom: 34px !important;
   }
 }
 

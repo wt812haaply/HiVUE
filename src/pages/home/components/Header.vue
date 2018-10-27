@@ -1,7 +1,7 @@
 <template>
 	<div class="homeHeader">
 		<div class="headerLeft" @click="headPopUp">{{ headinfo.left}}</div>
-		<div class="headerCont"><input type="" name="" placeholder="输入城市游玩主题" ></div>
+    <div class="headerCont"><input type="" name="" placeholder="输入城市游玩主题" ></div>
 		<div class="headerRight">{{ headinfo.right }}</div>
 	</div>
 </template>
@@ -40,7 +40,7 @@ export default {
 	@include LineH(43);
 	background: #ff544b;
 	color: #fff;
-	
+
 	.headerLeft{
 		font-size: 13 * $unit;
 	}

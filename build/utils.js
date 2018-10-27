@@ -62,7 +62,7 @@ exports.cssLoaders = function (options) {
       {
         loader: 'style-resources-loader',
         options: {
-          patterns: path.resolve(__dirname, '../src/common/less.less'),
+          patterns: path.resolve(__dirname, '../src/common/style/less.less'),
           injector: 'append'
         }
       }
@@ -72,7 +72,10 @@ exports.cssLoaders = function (options) {
       {
         loader: 'sass-resources-loader',
         options: {
-          resources: path.resolve(__dirname, '../src/common/sass.scss')
+          resources:[
+            path.resolve(__dirname, '../src/common/style/sass.scss'),
+            // path.resolve(__dirname, '../src/common/test.scss')
+          ]
         }
       }
     ),

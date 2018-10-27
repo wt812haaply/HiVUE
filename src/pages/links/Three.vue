@@ -2,15 +2,19 @@
   <div class="appContainer">
     <div class="appHeader">
       衣箱
+      <i @click="testLinks">Test</i>
     </div>
     <div class="appContent">
-      <div lang="en" @click="closeB">打开popUp</div>
-      <PopUp 
-        @btnLeft="linksA" 
-        @btnRight="linksB" 
-        @popUpClose="closeB" 
-        @oneBtn="oneBtn" 
-        :open="dialogOpen">
+
+      <!-- 1 PopupCenter-->
+      <div lang="en" @click="closeB">打开PopupCenter</div>
+      <popup-Center
+        @btnA="linksA"
+        @btnB="linksB"
+        @btnC="linksC"
+        @closeCenterBtn="closeB"
+        @oneBtn="oneBtn"
+        :open="OpenPopupCenter">
         <div slot="banner">
           <div class="banner">
             <img src="http://tu.yi23.net/collections/863-20180528_184712-1527504432586-1.jpg" alt="">
@@ -29,55 +33,117 @@
           </div>
         </div>
         <!-- 按钮 2个 -->
-        <div slot="btnA">left</div>
-        <div slot="btnB">right</div>
+        <div slot="btnA">btnA</div>
+        <div slot="btnB">btnB</div>
+        <div slot="btnC">btnC</div>
         <!-- oneBtn  1个 -->
         <div slot="oneBtn">
           <div class="oneBtn">关闭</div>
         </div>
-      </PopUp>
-      
-      <div lang="en" @click="showPrompt">打开prompt</div>
-      <Prompt 
-        :open="OpenPrompt"
-        :step="step" 
-        @toastColse="ColsePrompt"
+      </popup-Center>
+      <!-- 1 End-->
+
+
+      <!-- 2 notify-->
+      <div lang="en" @click="showNotify">打开Notify</div>
+      <notify
+        :open="OpenNotify"
+        :step="step"
+        @ColseNotify="ColseNotify"
         >
-        <p slot="prompt_info">{{ promptMsg }}</p>
-      </Prompt>
+        <p slot="notifyInfo">{{ NotifyMsg }}</p>
+      </notify>
+
+
+      <!-- 3 PopupDown-->
+      <div lang="en" @click="PopupDown">打开PopupDown</div>
+      <popup-Down
+        @PopupDownI="ClosePopupDown"
+        :open="OpenPopupDwon"
+      >
+        <div slot="title">
+          <div class="title">title <i>x</i></div>
+        </div>
+        <div slot="list">
+          <div>dkfldkfldkfl</div>
+          <ul class="listUl">
+              <li>111111</li>
+              <li>222</li>
+              <li>333</li>
+              <li>4444</li>
+              <li>222</li>
+              <li>333</li>
+              <li>4444</li>
+              <li>222</li>
+              <li>333</li>
+              <li>last--4444</li>
+          </ul>
+        </div>
+      </popup-Down>
+      <!-- 3 End -->
+
+      <!-- 4 PopupRight -->
+      <div lang="en" @click="PopupRight">打开PopupRight</div>
+
+        <popup-Right
+          :open="OpenPopupRight"
+          @closeRightBtn="closeRight"
+        >
+          <div class="popupRight">
+            <div>111</div>
+            sdsdsdsd
+          </div>
+        </popup-Right>
+
+
     </div>
     <div class="appFooter">
-      <NavList />
+      <navList />
     </div>
   </div>
 </template>
 <script>
-import NavList from '@/pages/links/NavList'
-import Prompt from '@/pages/lib/Prompt'
-import PopUp from '@/pages/lib/PopUp'
+import navList from '@/pages/components/NavList'
+import popupCenter from '@/pages/lib/PopupCenter'
+import popupDown from '@/pages/lib/PopupDown'
+import popupRight from '@/pages/lib/PopupRight'
+import notify from '@/pages/lib/Notify'
 export default {
   name: 'three',
   data() {
     return {
-      dialogOpen: false,
+      // OpenPopupCenter: false,
+      OpenPopupCenter: true,
       promptState:false,
-      promptMsg: '这里是错误提示！这里是错误提示！这里是错误提示！这里是错误提示！这里是错误提示！这里是错误提示！',
+      OpenPopupDwon:false,
+      OpenPopupRight:false,
+      NotifyMsg: '这里是错误提示！这里是错误提示！这里是错误提示！这里是错误提示！这里是错误提示！这里是错误提示！',
 
 
-      OpenPrompt: false,
+      OpenNotify: false,
       step: 1000,
     }
   },
   methods: {
+    // testlinks
+    testLinks(){
+      this.$router.push({
+        path: '/pages/Test'
+      })
+    },
+    // PopupCenter
     linksA() {
-      console.log("left的按钮")
+      console.log("btnA的按钮")
     },
     linksB() {
-      console.log("right的按钮")
+      console.log("btnB的按钮")
+    },
+    linksC() {
+      console.log("btnC的按钮")
     },
     closeB() {
-      this.dialogOpen = !this.dialogOpen
-      console.log("------this.dialogOpen------")
+      this.OpenPopupCenter = !this.OpenPopupCenter
+      console.log("------this.OpenPopupCenter------")
     },
     oneBtn() {
       console.log("-----oneBtn按钮关闭-----")
@@ -85,23 +151,47 @@ export default {
     },
 
 
-    // prompt
-    showPrompt () {
-        this.OpenPrompt = true
+    // notify
+    showNotify () {
+        this.OpenNotify = true
     },
-    ColsePrompt() {
-        this.OpenPrompt = false
+    ColseNotify() {
+        this.OpenNotify = false
     },
+
+
+    // PopupDown
+    PopupDown(){
+      this.OpenPopupDwon = !this.OpenPopupDwon
+      console.log("------this.PopupDown true------")
+    },
+    ClosePopupDown() {
+      this.PopupDown();
+      console.log("------this.OpenPopupDwon false------")
+    },
+
+    // PopupRight
+    PopupRight(){
+      this.OpenPopupRight = !this.OpenPopupRight
+    },
+    closeRight(){
+      this.PopupRight()
+    }
   },
   components: {
-    NavList,
-    PopUp,
-    Prompt,
+    navList,
+    popupCenter,
+    popupDown,
+    popupRight,
+    notify
   }
 }
 
 </script>
 <style scoped lang='scss'>
+#app > {
+   @include layout(43,50)
+}
 .banner {
   background: blue;
   color: #fff;
@@ -138,7 +228,7 @@ export default {
 }
 
 
-/* !
+/*
 	deep 优先 清楚ul.popBtn 的样式
 /deep/ ul.popBtn{
   width: 100%;
@@ -150,10 +240,10 @@ export default {
     text-align: center;
     @include LineH(0)
   }
-} 
+}
 */
 
-.prompt{
+.notify{
   p{
     padding: 0 50 * $unit 0 10px;
     @include Highline(1);
@@ -161,11 +251,45 @@ export default {
   }
 }
 
-
-
-
 /* 忽略style */
 div[lang|=en]{
   @include LineH(50);
 }
+
+
+
+/* popupDown */
+.title{
+  color: red;
+  @include LineH(40)
+  text-align: left;
+  font-size: 14 * $unit;
+  background:#A8FF1A;
+  display: flex;
+
+  i{
+    text-align: right;
+    flex: 1;
+    padding-right: 12px;
+  }
+}
+ul.listUl{
+  li{
+    color: blue;
+    @include LineH(50)
+    background: pink;
+  }
+}
+.popupRight{
+  height: 1500px;
+  position: absolute;
+  width: 100%;
+  background: red;
+}
+.appHeader i{
+  right: 0;
+  position: absolute;
+  float: right;
+}
+
 </style>

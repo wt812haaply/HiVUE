@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div @click="headMsg">点我下面的文案会替换</div>
-		<Bb>{{msg}}</Bb> 
+		<Bb></Bb> 
 	</div>
 </template>
 
@@ -11,7 +11,6 @@ import Bb from './b'
 		data () {
 			return{
 				headSS:'我是a.vue里的数据',
-				msg:''
 			}
 		},
 		components:{

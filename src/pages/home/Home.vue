@@ -1,11 +1,10 @@
 <template>
   <div class="appContainer">
     <div class="appHeader">
-      <Home-Header :headinfo="header" />
+      <home-Header :headinfo="header" :haha="haha" />
     </div>
 
     <div class="appContent">
-    <div style="height:100px; line-height: 100px;" @click="abcd">stick</div>
     <!-- <div></div> -->
     <!-- <transition name="animated" enter-active-class="animated bounceOutLeft" leave-active-class="animated bounceOutRight">
       <div class="homItem" v-show="headMsg">
@@ -14,40 +13,48 @@
         </div>
       </div>
     </transition> -->
-    <Home-Swiper :cont="swiperList" />
-    <Home-Icons :cont="iconList" />
-    <Home-Recommend :cont="recList" />
-    <Home-Likes :cont="likesList" />
-    <Home-PopUp />
+
+    <home-Swiper :cont="swiperList" />
+    <home-Icons :cont="iconList" />
+    <home-Recommend :cont="recList" />
+    <home-Likes :cont="likesList"  />
+    <home-PopUp />
+
     </div>
     <div class="appFooter">
-      <NavList />
+      <navList />
     </div>
   </div>
 
 </template>
 <!-- js -->
 <script>
-import NavList from '@/pages/links/NavList'
-import HomeHeader from './components/Header'
-import HomeSwiper from './components/Swiper'
-import HomeIcons from './components/Icons'
-import HomeRecommend from './components/Recommend'
-import HomeLikes from './components/Likes'
-import HomePopUp from './components/PopUp'
+//组件
+import navList from '@/pages/components/NavList'
+import homeHeader from './components/Header'
+import homeSwiper from './components/Swiper'
+import homeIcons from './components/Icons'
+import homeRecommend from './components/Recommend'
+import homeLikes from './components/Likes'
+import homePopUp from './components/PopUp'
+
+//接口文件
+import baidu  from '@/api/baidu'
+
 export default {
   name: 'Home',
   components: {
-    HomeHeader,
-    HomeSwiper,
-    HomeIcons,
-    HomeRecommend,
-    HomeLikes,
-    HomePopUp,
-    NavList
+    homeHeader,
+    homeSwiper,
+    homeIcons,
+    homeRecommend,
+    homeLikes,
+    homePopUp,
+    navList
   },
   data() {
     return {
+      haha:'',
       show:false,
       headMsg:false,
       showPopUp:false,
@@ -161,9 +168,7 @@ export default {
         id: '0001',
         listCon: {
           src: 'http://tu.yi23.net/Thumbs/41-20180629_105207-1530240727710-1.jpg!750',
-          error: require('../../assets/error.jpeg'),
-          loading: require('../../assets/loading.gif'),
-          name: '金色流苏礼服',
+          name: '好好-金色流苏礼服',
           comment: '1000',
           money: '281',
           addr: '北京',
@@ -173,8 +178,6 @@ export default {
         id: '0002',
         listCon: {
           src: 'http://tu.yi23.net/Thumbs/41-20180702_170259-1530522179742-1.jpg!750',
-          error: require('../../assets/error.jpeg'),
-          loading: require('../../assets/loading.gif'),
           name: '浅绿色抹胸礼服',
           comment: '10',
           money: '259',
@@ -185,8 +188,6 @@ export default {
         id: '0003',
         listCon: {
           src: 'http://tu.yi23.net/Thumbs/586-20180630_192956-1530358196975-1.jpg!750',
-          error: require('../../assets/error.jpeg'),
-          loading: require('../../assets/loading.gif'),
           name: '酒红色金色亮片娃娃领礼服酒红色金色亮片娃娃领\礼服',
           comment: '30',
           money: '300',
@@ -198,8 +199,6 @@ export default {
         id: '0004',
         listCon: {
           src: 'http://tu.yi23.net/Thumbs/586-20180630_192956-1530358196975-1.jpg!750',
-          error: require('../../assets/error.jpeg'),
-          loading: require('../../assets/loading.gif'),
           name: '酒红色金色亮片娃娃领礼服酒红色金色亮片娃娃领礼服',
           comment: '30',
           money: '300',
@@ -211,8 +210,58 @@ export default {
         id: '0005',
         listCon: {
           src: 'http://tu.yi23.net/Thumbs/586-20180630_192956-1530358196975-1.jpg!750',
-          error: require('../../assets/error.jpeg'),
-          loading: require('../../assets/loading.gif'),
+          name: '酒红色金色亮片娃娃领礼服酒红色金色亮片娃娃领礼服',
+          comment: '30',
+          money: '300',
+          addr: '北京',
+          desc: null,
+        },
+      },{
+        id: '0006',
+        listCon: {
+          src: 'http://tu.yi23.net/Thumbs/41-20180629_105207-1530240727710-1.jpg!750',
+          name: '金色流苏礼服',
+          comment: '1000',
+          money: '281',
+          addr: '北京',
+          desc: 'BIZZCUTAulenti了说的客服',
+        },
+      }, {
+        id: '0007',
+        listCon: {
+          src: 'http://tu.yi23.net/Thumbs/41-20180702_170259-1530522179742-1.jpg!750',
+          name: '浅绿色抹胸礼服',
+          comment: '10',
+          money: '259',
+          addr: '朝阳',
+          desc: null,
+        },
+      }, {
+        id: '0008',
+        listCon: {
+          src: 'http://tu.yi23.net/Thumbs/586-20180630_192956-1530358196975-1.jpg!750',
+          name: '酒红色金色亮片娃娃领礼服酒红色金色亮片娃娃领\礼服',
+          comment: '30',
+          money: '300',
+          addr: '北京',
+          desc: null,
+        },
+
+      }, {
+        id: '0009',
+        listCon: {
+          src: 'http://tu.yi23.net/Thumbs/586-20180630_192956-1530358196975-1.jpg!750',
+          name: '酒红色金色亮片娃娃领礼服酒红色金色亮片娃娃领礼服',
+          comment: '30',
+          money: '300',
+          addr: '北京',
+          desc: '快结束了尽量减少来访记录设计费',
+        },
+
+      }, {
+        id: '0010',
+        listCon: {
+          src: 'http://tu.yi23.net/Thumbs/586-20180630_192956-1530358196975-1.jpg!750',
           name: '酒红色金色亮片娃娃领礼服酒红色金色亮片娃娃领礼服',
           comment: '30',
           money: '300',
@@ -223,43 +272,51 @@ export default {
     }
   },
   methods: {
-    getHeadMsg:function(data){
-      this.headMsg = data;
-      console.log(data);
+    baidu(){
+      baidu.baiduApi().then((res) =>{
+        console.log(res)
+        this.haha = res.key;
+      })
+
+      let info = {
+        type:1,
+        page:1
+      }
+      baidu.xiaoshuoApi(info).then((res) =>{
+        console.log(res)
+      })
+
+      baidu.xiaoshuoApi1(info).then((res) =>{
+        console.log(res)
+      })
+
+
+
+
+
     },
 
-
-    abcd:function(){
-      window.location.href='/pages/sticky/Sne'
-    }
-
-    // dakai:function(data){
-    //   console.log(data);
-    // },
-    // getMsg: function(data) {
-    //   this.lieksMsg = data;
-    //   let hh = this.lieksMsg;
-    //   if (hh) {
-    //     console.log(this.lieksMsg)
-    //     hh = hh + '+111';
-    //     this.length = '-------' + this.lieksMsg.length
-    //     console.log(this.lieksMsg.length)
-    //   }
-    // },
-  }
+  },
+  created(){
+    this.baidu()
+  },
 }
 
 </script>
 <!-- sass -->
 <style scoped lang='scss'>
+#app > {
+   @include layout(43,50)
+}
 .homItem {
   @include center(200);
   z-index: 9;
   .testImg {
     @include WH(200);
-    /* @include imgP(200); */
     padding-bottom: 92.3333%;
   }
 }
+.hhh{
 
+}
 </style>

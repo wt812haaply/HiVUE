@@ -1,6 +1,6 @@
 <template>
 	<div>
-	two A的内容
+	<i class="iba">two A的内容</i>
 	</div>
 </template>
 
