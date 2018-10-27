@@ -13,6 +13,7 @@
 	</div>
 </template>
 <script>
+import { baiduApi } from '@/api/baidu';
 export default{
 	name:'test',
 	data () {
@@ -75,6 +76,27 @@ export default{
 			]
 		}
 	},
+  methods: {
+//    baidu() {
+//      let txt = '/leaf/posting/extend/123'
+//      let baiduApi = '/openapi/BaikeLemmaCardApi?scope=103&format=json&appid=379020&bk_key=%E9%93%B6%E9%AD%82&bk_length=600'
+//      axios.get(baiduApi).then((res) => {
+//        console.log(res);
+//      });
+//
+//    }
+    baidu(){
+      baiduApi().then((res) =>{
+        console.log(res)
+      })
+    }
+
+  },
+  // 接口数据
+  created(){
+
+      this.baidu()
+  },
 }
 </script>
 <style scoped lang='scss'>

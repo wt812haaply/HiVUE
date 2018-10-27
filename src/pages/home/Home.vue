@@ -34,6 +34,9 @@ import homeIcons from './components/Icons'
 import homeRecommend from './components/Recommend'
 import homeLikes from './components/Likes'
 import homePopUp from './components/PopUp'
+
+import { baiduApi } from '@/api/baidu'
+
 export default {
   name: 'Home',
   components: {
@@ -264,10 +267,15 @@ export default {
     }
   },
   methods: {
-    getHeadMsg:function(data){
-      this.headMsg = data;
-      console.log(data);
+    baidu(){
+      baiduApi().then((res) =>{
+        console.log(res)
+      })
     },
+//    getHeadMsg:function(data){
+//      this.headMsg = data;
+//      console.log(data);
+//    },
 
 
     // dakai:function(data){
@@ -283,7 +291,10 @@ export default {
     //     console.log(this.lieksMsg.length)
     //   }
     // },
-  }
+  },
+  created(){
+    this.baidu()
+  },
 }
 
 </script>

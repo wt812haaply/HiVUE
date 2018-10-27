@@ -31,8 +31,9 @@ import store from './store'
 
 
 //axios
-import axios from 'axios';
-Vue.prototype.axios = axios;
+// import axios from 'axios'
+import axios from './common/js/http'
+Vue.prototype.axios = axios
 
 //bus
 Vue.prototype.bus = new Vue()

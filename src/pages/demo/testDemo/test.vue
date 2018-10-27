@@ -79,8 +79,7 @@
   //引用方法地址
   import utils  from '@/common/js/utils.js'
   import smallLoading from '../../components/smallLoading'
-  // import axios from 'axios'
-  import axios from '../../../common/js/http'
+//  import axios from '../../../common/js/http'
 
 
   export default {
@@ -179,16 +178,14 @@
 
 
 
-      baidu() {
-        let txt = '/leaf/posting/extend/123'
-        let baiduApi = '/openapi/BaikeLemmaCardApi?scope=103&format=json&appid=379020&bk_key=%E9%93%B6%E9%AD%82&bk_length=600'
-        axios.get(baiduApi).then((res) => {
-          console.log(1)
-          console.log(res);
-//          this.shareForNew = res.data;
-        });
-
-      }
+//      baidu() {
+//        let txt = '/leaf/posting/extend/123'
+//        let baiduApi = '/openapi/BaikeLemmaCardApi?scope=103&format=json&appid=379020&bk_key=%E9%93%B6%E9%AD%82&bk_length=600'
+//        axios.get(baiduApi).then((res) => {
+//          console.log(res);
+//        });
+//
+//      }
 
 
 
@@ -229,7 +226,7 @@
       let arr1 = [1,24,5,-1,-22,126,78,9,21,2,1,2,1,4,325,14]
       this.getArrSort(arr1)
       this.whatThis()
-      this.baidu()
+//      this.baidu()
 
     },
   }
