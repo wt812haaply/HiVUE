@@ -18,6 +18,10 @@ module.exports = {
       '/openapi':{
         target: 'http://baike.baidu.com/api/',
         changeOrigin: true
+      },
+      '/satinGodApi':{
+        target: 'https://www.apiopen.top',
+        changeOrigin: true
       }
 
 
