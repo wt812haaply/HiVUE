@@ -1,7 +1,7 @@
 <template>
   <div class="appContainer">
     <div class="appHeader">
-      <home-Header :headinfo="header" />
+      <home-Header :headinfo="header" :haha="haha" />
     </div>
 
     <div class="appContent">
@@ -13,11 +13,13 @@
         </div>
       </div>
     </transition> -->
+
     <home-Swiper :cont="swiperList" />
     <home-Icons :cont="iconList" />
     <home-Recommend :cont="recList" />
-    <home-Likes :cont="likesList" />
+    <home-Likes :cont="likesList"  />
     <home-PopUp />
+
     </div>
     <div class="appFooter">
       <navList />
@@ -27,6 +29,7 @@
 </template>
 <!-- js -->
 <script>
+//组件
 import navList from '@/pages/components/NavList'
 import homeHeader from './components/Header'
 import homeSwiper from './components/Swiper'
@@ -35,7 +38,8 @@ import homeRecommend from './components/Recommend'
 import homeLikes from './components/Likes'
 import homePopUp from './components/PopUp'
 
-import { baiduApi } from '@/api/baidu'
+//接口文件
+import baidu  from '@/api/baidu'
 
 export default {
   name: 'Home',
@@ -50,6 +54,7 @@ export default {
   },
   data() {
     return {
+      haha:'',
       show:false,
       headMsg:false,
       showPopUp:false,
@@ -268,9 +273,11 @@ export default {
   },
   methods: {
     baidu(){
-      baiduApi().then((res) =>{
+      baidu.baiduApi().then((res) =>{
         console.log(res)
+        this.haha = res.key;
       })
+
     },
 //    getHeadMsg:function(data){
 //      this.headMsg = data;
