@@ -1,7 +1,7 @@
 <template>
 	<div class="homeHeader">
 		<div class="headerLeft" @click="headPopUp">{{ headinfo.left}}</div>
-    <div class="headerCont"><input type="" name="" placeholder="输入城市游玩主题" ></div>
+    <div class="headerCont"><input type="" name="" :placeholder="hahainfo" ></div>
 		<div class="headerRight">{{ headinfo.right }}</div>
 	</div>
 </template>
@@ -16,7 +16,10 @@ export default {
 	props:{
 		headinfo:{
 			type:Object,
-		}
+		},
+    hahainfo:{
+		  type:String
+    }
 	},
 	wathc:{
 	},

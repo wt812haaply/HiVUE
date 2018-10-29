@@ -30,7 +30,7 @@ $img:100%;
 }
 
 /*
-  全局框架 
+  全局框架
 */
 
 @mixin layout($appheadHeight,$appFooterHeight){
@@ -54,6 +54,7 @@ $img:100%;
       height: $appFooterHeight * $unit;
       line-height: $appFooterHeight * $unit;
       background: green;
+      background: #fff;
     }
   }
 }
@@ -63,8 +64,8 @@ $img:100%;
 } */
 
 
-/* 
-  高跟宽计算  
+/*
+  高跟宽计算
 */
 
 @mixin WH($w: null, $h: null) {
@@ -72,7 +73,7 @@ $img:100%;
   @if $w and $h {
     width: $w * $unit;
     height: $h * $unit;
-  } 
+  }
   /* 正方形  WH(10) */
   @else if not $h{
     width: $w * $unit;
@@ -90,7 +91,7 @@ $img:100%;
   line-height: $w * $unit;
 }
 
-/* 
+/*
   默认显示 N 行  过长……省略
  */
 
@@ -132,17 +133,17 @@ $img:100%;
         background: #fff;
         @include transform(-50%);
         z-index:2;
-      }   
+      }
     }
-  & > .mask { 
+  & > .mask {
     @include mask
-  } 
+  }
 
 }
 
 
 /*
-  图片占位处理 
+  图片占位处理
 */
 
  @mixin imgP($w:null,$h:null) {
@@ -170,7 +171,7 @@ $img:100%;
                           (t,200)     /* 纤细体 */
                           (l,300)     /* 细体   */
                           (r,400)     /* 常规体 */
-                          (m,500)     /* 中黑体 */     
+                          (m,500)     /* 中黑体 */
                           (s,600)     /* 中粗体 */
                           (b,700)     /* 粗体   */
   {
@@ -224,7 +225,7 @@ $img:100%;
             transform-origin: 0 0;
             transform: scaleY(0.5);
         }
-    }    
+    }
     @else if $line == borderRight{
         /* border-right */
         &:after{
@@ -237,9 +238,9 @@ $img:100%;
             border-right: 1px solid rgba(0, 200, 200, 1);
             color: rgba(0, 0, 0, 0.1);
             transform-origin: 100% 0;
-            transform: scaleX(0.5);  
+            transform: scaleX(0.5);
         }
-    }    
+    }
     @else if $line == borderBottom{
         /* border-bottom */
         &:after{
@@ -254,7 +255,7 @@ $img:100%;
             transform-origin: 0 100%;
             transform: scaleY(0.5);
         }
-    }    
+    }
     @else if $line == borderLeft{
         /* border-left */
         &:after{

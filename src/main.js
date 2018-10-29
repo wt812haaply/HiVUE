@@ -9,6 +9,7 @@ import router from './router'
 // import iphoneX from '@/common/style/iphoneX.css'
 // import Animate from '@/common/style/animate.css'
 
+import  iconFont from '@/common/style/iconFont.css'
 // swiper
 // import 'swiper/dist/css/swiper.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'

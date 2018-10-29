@@ -1,9 +1,8 @@
 <template>
   <div class="appContainer">
     <div class="appHeader">
-      <home-Header :headinfo="header" :haha="haha" />
+      <home-Header :headinfo="header" :hahainfo="haha" />
     </div>
-
     <div class="appContent">
     <!-- <div></div> -->
     <!-- <transition name="animated" enter-active-class="animated bounceOutLeft" leave-active-class="animated bounceOutRight">
@@ -13,7 +12,7 @@
         </div>
       </div>
     </transition> -->
-
+      <!-- <div>1</div> -->
     <home-Swiper :cont="swiperList" />
     <home-Icons :cont="iconList" />
     <home-Recommend :cont="recList" />
@@ -274,8 +273,9 @@ export default {
   methods: {
     baidu(){
       baidu.baiduApi().then((res) =>{
-        console.log(res)
-        this.haha = res.key;
+        console.log(res,'//')
+        this.haha = res.data.desc
+
       })
 
       let info = {
@@ -289,7 +289,6 @@ export default {
       baidu.xiaoshuoApi1(info).then((res) =>{
         console.log(res)
       })
-
 
 
 
