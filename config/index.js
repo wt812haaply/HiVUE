@@ -15,14 +15,14 @@ module.exports = {
         target: 'http://testwapi.95vintage.com/',
         changeOrigin: true
       },
-      '/openapi':{
-        target: 'http://baike.baidu.com/api/',
-        changeOrigin: true
-      },
-      '/satinApi':{
-        target: 'https://www.apiopen.top',
-        changeOrigin: true
-      },
+      // '/openapi':{
+      //   target: 'http://baike.baidu.com/api/',
+      //   changeOrigin: true
+      // },
+      // '/satinApi':{
+      //   target: 'https://www.apiopen.top',
+      //   changeOrigin: true
+      // },
       '/novelApi':{
         target: 'https://www.apiopen.top',
         changeOrigin: true

@@ -30,7 +30,25 @@ const Common = {
     } else {
       return 0;
     }
-  }
+  },
+
+
+  /*
+   * @localStorage
+   */
+  // getLocalStorage(){
+  //   const once = localStorage.getItem("indexTips")
+  //   if(!once){
+  //     localStorage.setItem("indexTips",1)
+  //     this.stepTip.mask = !this.stepTip.mask;
+  //     console.log(this.stepTip.mask)
+  //   }
+  //   else {
+  //     this.stepTip.mask = !this.stepTip.mask;
+  //     console.log(this.stepTip.mask)
+  //   }
+  // },
+
 
 
 }

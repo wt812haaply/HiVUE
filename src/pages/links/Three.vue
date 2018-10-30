@@ -14,7 +14,9 @@
         @btnC="linksC"
         @closeCenterBtn="closeB"
         @oneBtn="oneBtn"
-        :open="OpenPopupCenter">
+        :open="OpenPopupCenter"
+        v-show="stepTip.mask"
+      >
         <div slot="banner">
           <div class="banner">
             <img src="http://tu.yi23.net/collections/863-20180528_184712-1527504432586-1.jpg" alt="">
@@ -122,9 +124,29 @@ export default {
 
       OpenNotify: false,
       step: 1000,
+      stepTip: {
+        one:true,
+        two:false,
+        three:false,
+        mask:true,
+      },
     }
   },
   methods: {
+    getLocalStorage(){
+      let once = localStorage.getItem("indexTips")
+      if(!once){
+        localStorage.setItem("indexTips",1)
+        this.stepTip.mask = !this.stepTip.mask;
+        console.log(this.stepTip.mask)
+      }
+      else {
+        this.stepTip.mask = !this.stepTip.mask;
+        console.log(this.stepTip.mask)
+      }
+    },
+
+
     // testlinks
     testLinks(){
       this.$router.push({
@@ -142,12 +164,14 @@ export default {
       console.log("btnC的按钮")
     },
     closeB() {
+      this.getLocalStorage()
       this.OpenPopupCenter = !this.OpenPopupCenter
       console.log("------this.OpenPopupCenter------")
     },
     oneBtn() {
       console.log("-----oneBtn按钮关闭-----")
       this.closeB()
+
     },
 
 
@@ -184,6 +208,18 @@ export default {
     popupDown,
     popupRight,
     notify
+  },
+
+  created() {
+
+    let once = localStorage.getItem("indexTips")
+    if(once){
+      this.stepTip.mask = false;
+    }else {
+      this.stepTip.mask = true;
+    }
+
+
   }
 }
 

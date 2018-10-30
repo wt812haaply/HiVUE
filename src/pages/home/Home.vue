@@ -1,5 +1,5 @@
 <template>
-  <div class="appContainer">
+  <div class="appContainer font-RobotoTh ">
     <div class="appHeader">
       <home-Header :headinfo="header" :hahainfo="haha" />
     </div>
@@ -12,7 +12,6 @@
         </div>
       </div>
     </transition> -->
-      <!-- <div>1</div> -->
     <home-Swiper :cont="swiperList" />
     <home-Icons :cont="iconList" />
     <home-Recommend :cont="recList" />
@@ -272,22 +271,20 @@ export default {
   },
   methods: {
     baidu(){
-      baidu.baiduApi().then((res) =>{
-        console.log(res,'//')
-        this.haha = res.data.desc
 
-      })
 
       let info = {
         type:1,
         page:1
       }
-      baidu.xiaoshuoApi(info).then((res) =>{
-        console.log(res)
-      })
+//      baidu.xiaoshuoApi(info).then((res) =>{
+//        console.log(res)
+//      })
 
       baidu.xiaoshuoApi1(info).then((res) =>{
         console.log(res)
+        this.haha = res.data.msg
+        console.log(this.haha)
       })
 
 
@@ -297,7 +294,7 @@ export default {
 
   },
   created(){
-    this.baidu()
+     this.baidu()
   },
 }
 
