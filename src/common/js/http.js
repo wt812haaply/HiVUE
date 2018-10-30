@@ -57,12 +57,12 @@ axios.interceptors.response.use(
           // store.commit('loginOut');
           // store.commit('bigLoading', false);
           console.log('401');
-          // router.replace({
-          //   path: '/User/loginPage',
-          //   query: {
-          //     redirect: router.currentRoute.fullPath
-          //   }
-          // });
+        // router.replace({
+        //   path: '/User/loginPage',
+        //   query: {
+        //     redirect: router.currentRoute.fullPath
+        //   }
+        // });
       }
     }
     return Promise.reject(error.response);

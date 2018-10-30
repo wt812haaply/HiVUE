@@ -23,12 +23,10 @@ module.exports = {
       //   target: 'https://www.apiopen.top',
       //   changeOrigin: true
       // },
-      '/novelApi':{
+      '/novelApi': {
         target: 'https://www.apiopen.top',
         changeOrigin: true
       },
-
-
 
 
     },

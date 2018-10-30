@@ -110,6 +110,9 @@ import popupCenter from '@/pages/lib/PopupCenter'
 import popupDown from '@/pages/lib/PopupDown'
 import popupRight from '@/pages/lib/PopupRight'
 import notify from '@/pages/lib/Notify'
+
+//引用方法地址
+import utils  from '@/common/js/utils.js'
 export default {
   name: 'three',
   data() {
@@ -133,18 +136,18 @@ export default {
     }
   },
   methods: {
-    getLocalStorage(){
-      let once = localStorage.getItem("indexTips")
-      if(!once){
-        localStorage.setItem("indexTips",1)
-        this.stepTip.mask = !this.stepTip.mask;
-        console.log(this.stepTip.mask)
-      }
-      else {
-        this.stepTip.mask = !this.stepTip.mask;
-        console.log(this.stepTip.mask)
-      }
-    },
+//    getLocalStorage(){
+//      let once = localStorage.getItem("indexTips")
+//      if(!once){
+//        localStorage.setItem("indexTips",1)
+//        this.stepTip.mask = !this.stepTip.mask;
+//        console.log(this.stepTip.mask)
+//      }
+//      else {
+//        this.stepTip.mask = !this.stepTip.mask;
+//        console.log(this.stepTip.mask)
+//      }
+//    },
 
 
     // testlinks
@@ -164,7 +167,6 @@ export default {
       console.log("btnC的按钮")
     },
     closeB() {
-      this.getLocalStorage()
       this.OpenPopupCenter = !this.OpenPopupCenter
       console.log("------this.OpenPopupCenter------")
     },
@@ -212,13 +214,14 @@ export default {
 
   created() {
 
-    let once = localStorage.getItem("indexTips")
+    //公用方法
+    let once =  utils.messageStatus()
     if(once){
-      this.stepTip.mask = false;
-    }else {
       this.stepTip.mask = true;
+    }else {
+      this.stepTip.mask = false;
     }
-
+    //end
 
   }
 }
