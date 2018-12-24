@@ -4,15 +4,25 @@
       <home-Header :headinfo="header" :hahainfo="haha" />
     </div>
     <div class="appContent">
-
-
-      <div class="testing">
-        <div aspectratio w-168-210>
-          <img src="http://tu.yi23.net/Thumbs/586-20180630_192956-1530358196975-1.jpg!750" alt="">
-        </div>
+      <!--test-->
+      <div v-if="false">
+        <div :class="[{testing:isStatus},'testingBg']">1</div>
+        <div :class="{testing:isStatus}" class="testingBg">2</div>
+        <div :class="[isStatus ? testingClass : '','testingBg']">3</div>
       </div>
+      <!--test End-->
 
-    <!-- <div></div> -->
+      <!--mixin 混入-->
+      <div>
+       <button @click="Total">button</button>
+        <p>{{isTotal}}</p>
+        {{ two }} <!--取的mixin two -->
+
+        <button @click="Total2">button 2</button>
+        <p>{{isTotal2}}</p>
+       - {{ three }} <!-- 当前组件data 中的three -->
+       - {{ two }} <!--取的mixin two -->
+      </div>
     <!-- <transition name="animated" enter-active-class="animated bounceOutLeft" leave-active-class="animated bounceOutRight">
       <div class="homItem" v-show="headMsg">
         <div class="testImg">
@@ -43,12 +53,14 @@ import homeIcons from './components/Icons'
 import homeRecommend from './components/Recommend'
 import homeLikes from './components/Likes'
 import homePopUp from './components/PopUp'
+import { testing } from '@/common/js/mixin'
 
 //接口文件
 import baidu  from '@/api/baidu'
 
 export default {
   name: 'Home',
+  mixins: [ testing ],
   components: {
     homeHeader,
     homeSwiper,
@@ -60,6 +72,15 @@ export default {
   },
   data() {
     return {
+      //
+      testingClass:'testing',
+      isStatus:true,
+      isTotal2:'',
+      three:20,
+      //
+
+
+
       haha:'',
       show:false,
       headMsg:false,
@@ -278,9 +299,13 @@ export default {
     }
   },
   methods: {
+    //
+    Total2(){
+      this.isTotal2 = this.three + this.two
+    },
+
+
     baidu(){
-
-
       let info = {
         type:1,
         page:1
@@ -304,6 +329,8 @@ export default {
   created(){
      this.baidu()
   },
+  computed:{
+  }
 }
 
 </script>
@@ -315,89 +342,17 @@ export default {
 .homItem {
   @include center(200);
   z-index: 9;
-  .testImg {
-    @include WH(200);
-    padding-bottom: 92.3333%;
-  }
-}
-.hhh{
-
-}
-[aspectratio]{
-  position: relative;
-}
-[aspectratio]::before{
-  content: '';
-  display: block;
-  width: 1px;
-  margin-left: -1px;
-  height: 0;
-  padding-bottom: 120%;
-}
-
-/*[w-168-210] {*/
-  /*width: 168px;*/
-/*}*/
-[w-168-210] {
-  aspect-ratio: '750:937';
-}
-
-@mixin imgPP($w,$h) {
-  padding-bottom: ($h/$w) * 100%;
-}
-
-[imgP]{
-  width: 100%;
-  height: 0rem;
-  position: relative;
-  overflow: hidden;
-}
-[imgP]::before{
-  content: '';
-  @include imgPP(750,937)
 }
 
 
 .testing{
-  width:100%;
-  height:auto;
-  background: #ddd;
-
+  width: 100%;
+  height: 200px;
+  background: red;
 }
 
-img{
-  width:100%;
+.testingBg{
+  background: blue;
 }
 
-
-
-
-[w-168-210] {
-  width: 168px;
-}
-[w-168-210] {
-  aspect-ratio: '168:210';
-}
-[w-67-84] {
-  width: 67px;
-}
-[w-67-84] {
-  aspect-ratio: '67:84';
-}
-[w-168-223] {
-  width: 168px;
-}
-[w-168-223] {
-  aspect-ratio: '168:223';
-}
-[aspectratio] {
-  position: relative;
-}
-[aspectratio]::before {
-  content: '';
-  display: block;
-  width: 1px;
-  margin-left: -1px;
-  height: 0;
-}
 </style>
