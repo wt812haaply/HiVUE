@@ -32,7 +32,7 @@ module.exports = {
     },
 
     // Various Dev Server settings
-    host: '192.168.0.4', // can be overwritten by process.env.HOST
+    host: '0.0.0.0', // can be overwritten by process.env.HOST
     //host: '192.168.0.18',
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
@@ -54,6 +54,8 @@ module.exports = {
 
     // https://webpack.js.org/configuration/devtool/#development
     devtool: 'cheap-module-eval-source-map',
+    // devtool: false,
+
 
     // If you have problems debugging vue-files in devtools,
     // set this to false - it *may* help
@@ -78,7 +80,7 @@ module.exports = {
 
     productionSourceMap: true,
     // https://webpack.js.org/configuration/devtool/#production
-    devtool: '#source-map',
+    devtool: false,
 
     // Gzip off by default as many popular static hosts such as
     // Surge or Netlify already gzip all static assets for you.

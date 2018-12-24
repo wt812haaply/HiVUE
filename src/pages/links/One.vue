@@ -44,5 +44,7 @@ export default {
 .banner {
   @include imgP(200, 100);
 }
-
+:target {
+  /*background: red;*/
+}
 </style>

@@ -4,6 +4,14 @@
       <home-Header :headinfo="header" :hahainfo="haha" />
     </div>
     <div class="appContent">
+
+
+      <div class="testing">
+        <div aspectratio w-168-210>
+          <img src="http://tu.yi23.net/Thumbs/586-20180630_192956-1530358196975-1.jpg!750" alt="">
+        </div>
+      </div>
+
     <!-- <div></div> -->
     <!-- <transition name="animated" enter-active-class="animated bounceOutLeft" leave-active-class="animated bounceOutRight">
       <div class="homItem" v-show="headMsg">
@@ -314,5 +322,82 @@ export default {
 }
 .hhh{
 
+}
+[aspectratio]{
+  position: relative;
+}
+[aspectratio]::before{
+  content: '';
+  display: block;
+  width: 1px;
+  margin-left: -1px;
+  height: 0;
+  padding-bottom: 120%;
+}
+
+/*[w-168-210] {*/
+  /*width: 168px;*/
+/*}*/
+[w-168-210] {
+  aspect-ratio: '750:937';
+}
+
+@mixin imgPP($w,$h) {
+  padding-bottom: ($h/$w) * 100%;
+}
+
+[imgP]{
+  width: 100%;
+  height: 0rem;
+  position: relative;
+  overflow: hidden;
+}
+[imgP]::before{
+  content: '';
+  @include imgPP(750,937)
+}
+
+
+.testing{
+  width:100%;
+  height:auto;
+  background: #ddd;
+
+}
+
+img{
+  width:100%;
+}
+
+
+
+
+[w-168-210] {
+  width: 168px;
+}
+[w-168-210] {
+  aspect-ratio: '168:210';
+}
+[w-67-84] {
+  width: 67px;
+}
+[w-67-84] {
+  aspect-ratio: '67:84';
+}
+[w-168-223] {
+  width: 168px;
+}
+[w-168-223] {
+  aspect-ratio: '168:223';
+}
+[aspectratio] {
+  position: relative;
+}
+[aspectratio]::before {
+  content: '';
+  display: block;
+  width: 1px;
+  margin-left: -1px;
+  height: 0;
 }
 </style>
