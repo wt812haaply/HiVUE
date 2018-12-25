@@ -66,24 +66,23 @@ export default{
 				url: 'demo/scroller/',
 				name: '下拉刷新',
 				tag: 'demo'
-			}, {
-			  id:'0011',
-          url:'demo/testDemo/',
-          name:'测试',
-          tag:'test'
-        }
+			},
+      {
+        id:'0011',
+        url:'demo/testDemo/',
+        name:'测试',
+        tag:'test'
+      },
+      {
+        id:'0012',
+        url:'demo/vuexDemo/',
+        name:'vuex测试',
+        tag:'vuex'
+      }
 			]
 		}
 	},
   methods: {
-//    baidu() {
-//      let txt = '/leaf/posting/extend/123'
-//      let baiduApi = '/openapi/BaikeLemmaCardApi?scope=103&format=json&appid=379020&bk_key=%E9%93%B6%E9%AD%82&bk_length=600'
-//      axios.get(baiduApi).then((res) => {
-//        console.log(res);
-//      });
-//
-//    }
 
   },
   // 接口数据

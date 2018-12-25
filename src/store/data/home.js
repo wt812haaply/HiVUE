@@ -6,9 +6,14 @@ const state = {
 }
 
 const getters = {
-  // getPopUpstatus: state => {
-  //     return state.popUpstatus
-  // }
+  /**
+   *
+   * getPopUpstatus: state => {
+        return state.popUpstatus
+     }
+   * 方法同上
+   *
+   */
   getPopUpstatus:state => state.popUpstatus.name
 }
 

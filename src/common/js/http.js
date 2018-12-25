@@ -42,8 +42,8 @@ axios.interceptors.request.use(
 axios.interceptors.response.use(
   response => {
     // smallLoading.close();
-    console.log('response');
-    console.log(response);
+    // console.log('response');
+    // console.log(response);
     if (response) {
     }
     return response;

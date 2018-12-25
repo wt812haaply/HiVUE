@@ -30,6 +30,8 @@ const emitpropsDemo = () => import('@/pages/demo/emitprops/demo')
 const scrollerDemo = () => import('@/pages/demo/scroller/demo')
 //testDemo
 const testDemo = () => import('@/pages/demo/testDemo/test')
+//vuexDemo
+const vuexDemo = () => import('@/pages/demo/vuexDemo/vuex')
 Vue.use(Router)
 export default new Router({
   mode: 'history',
@@ -155,6 +157,14 @@ export default new Router({
       path:'/pages/demo/testDemo/test',
       name:'testDemo',
       component: testDemo,
+      meta: {
+        title: '衣二三'
+      }
+    },
+    {
+      path:'/pages/demo/vuexDemo/vuex',
+      name:'vuexDemo',
+      component: vuexDemo,
       meta: {
         title: '衣二三'
       }

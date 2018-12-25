@@ -5,6 +5,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+
 // 样式
 // import iphoneX from '@/common/style/iphoneX.css'
 // import Animate from '@/common/style/animate.css'
@@ -27,7 +28,7 @@ Vue.use(VueLazyLoad,{
 import VueScroller from 'vue-scroller'
 Vue.use(VueScroller)
 
-//store vuex
+//store vuexDemo
 import store from './store/store'
 
 

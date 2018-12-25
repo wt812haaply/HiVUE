@@ -315,9 +315,9 @@ export default {
 //      })
 
       baidu.xiaoshuoApi1(info).then((res) =>{
-        console.log(res)
+//        console.log(res)
         this.haha = res.data.msg
-        console.log(this.haha,'this.haha')
+//        console.log(this.haha,'this.haha')
       })
 
 
