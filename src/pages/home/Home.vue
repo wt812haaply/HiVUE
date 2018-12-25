@@ -301,7 +301,7 @@ export default {
   methods: {
     //
     Total2(){
-      this.isTotal2 = this.three + this.two
+      this.isTotal2 += this.three + this.two
     },
 
 
@@ -317,7 +317,7 @@ export default {
       baidu.xiaoshuoApi1(info).then((res) =>{
         console.log(res)
         this.haha = res.data.msg
-        console.log(this.haha)
+        console.log(this.haha,'this.haha')
       })
 
 
@@ -328,6 +328,7 @@ export default {
   },
   created(){
      this.baidu()
+    console.log('Home')
   },
   computed:{
   }

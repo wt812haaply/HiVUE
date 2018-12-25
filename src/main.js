@@ -27,8 +27,8 @@ Vue.use(VueLazyLoad,{
 import VueScroller from 'vue-scroller'
 Vue.use(VueScroller)
 
-//store
-import store from './store'
+//store vuex
+import store from './store/store'
 
 
 //axios

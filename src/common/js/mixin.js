@@ -10,5 +10,9 @@ export const testing = {
     Total(){
       this.isTotal = this.one + this.two
     }
-  }
+  },
+  // 接口数据
+  created(){
+    console.log('mixin')
+  },
 }

@@ -26,13 +26,14 @@ export default {
   },
   methods: {
     openPopUp() {
-      this.$store.state.popUpstatus = !this.$store.state.popUpstatus
+      console.log(this.$store.getters.getPopUpstatus,'vuex获取的值')
+//      console.log(this.$store.state.home.popUpstatus)
     }
   },
   computeds: {
-    oneGetPopUp() {
-      this.$store.state.popUpstatus
-    }
+//    oneGetPopUp() {
+//      this.$store.state.popUpstatus
+//    }
   }
 }
 
