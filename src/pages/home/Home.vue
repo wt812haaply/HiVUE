@@ -299,7 +299,7 @@ export default {
     }
   },
   methods: {
-    //
+    // mixin
     Total2(){
       this.isTotal2 += this.three + this.two
     },

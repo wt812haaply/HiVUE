@@ -7,10 +7,12 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
 	name: 'HomeHeader',
 	data () {
 		return {
+		  ruguo:''
 		}
 	},
 	props:{
@@ -26,14 +28,22 @@ export default {
 	methods:{
 		headPopUp(){
 //			this.$store.state.popUpstatus = !this.$store.state.popUpstatus
-      console.log(this.$store.getters.getPopUpstatus,'vuex获取的值')
+//      console.log(this.$store.getters.getAA,'vuex获取的值')
+//      console.log(this.$store.getters.getBB,'//////1111')
+      console.log(this.$store.getters.getCC,'/?')
 		}
 	},
 	computed:{
+    ...mapGetters([
+      'getCC'
+    ])
 //		headGetpopUpStatus(){
 //			return this.$store.state.popUpstatus
 //		}
-	}
+	},
+  created() {
+	  this.$store.dispatch('getCC')
+  }
 }
 </script>
 <!-- sass -->

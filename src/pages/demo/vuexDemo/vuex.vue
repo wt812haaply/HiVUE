@@ -5,8 +5,8 @@
       <!--
         getVxiaoshuoApi1 是store -- data -- four.js 里面的数据方法
       -->
-      <li v-for="(item,index) in getVxiaoshuoApi1">
-        {{ item.author}}
+      <li v-for="(item,index) in getVxiaoshuoApi1" :key="index">
+        {{ item.author}} + {{index + 1}}
       </li>
     </ul>
   </div>

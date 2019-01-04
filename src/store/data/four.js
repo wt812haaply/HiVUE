@@ -40,28 +40,6 @@ const actions = {
   }
 }
 
-/*
-vuexDemo
-getAreaList(context) {
-    address.serviceAreaList().then((res) => {
-      if(res.data.code==200){
-        context.commit('getAreaList', res.data.data)
-      }
-
-    })
-  }
-
-
-
-api
-serviceAreaList(){
-    let urls = config.serviceAreaList
-    return axios.get(urls).then(function(res) {
-      return Promise.resolve(res)
-    })
-  }
- */
-
 const mutations = {
   getVxiaoshuoApi1(state, list) {
     state.cityList = list

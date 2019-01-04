@@ -14,16 +14,17 @@ const getters = {
    * 方法同上
    *
    */
-  getPopUpstatus:state => state.popUpstatus.name
+  getCC:state => {
+    return state.popUpstatus.ab
+  }
+  // getAA:state => state.popUpstatus.ab,
+  // getBB:state => state.popUpstatus.name
 }
 
 const actions = {}
 
 const mutations = {
-  // getStatus(state, popUpstatus) {
-  //   state.popUpstatus = this.popUpstatus
-  //
-  // }
+
 }
 
 export default {
