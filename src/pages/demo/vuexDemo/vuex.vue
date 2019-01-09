@@ -9,6 +9,8 @@
         {{ item.author}} + {{index + 1}}
       </li>
     </ul>
+    <button @click="testInfo">测试信息</button>
+    <p>{{ vuexTestInfo }}</p>
   </div>
 </template>
 <script>
@@ -18,15 +20,19 @@ export default {
   name: 'vuex',
   data() {
     return {
-
+      vuexTestInfo:''
     }
   },
   methods: {
-
+    testInfo(){
+      console.log(this.$store.getters.getTestInfo,'/?////')
+      this.vuexTestInfo = this.$store.getters.getTestInfo
+    }
   },
   computed:{
     ...mapGetters([
-      'getVxiaoshuoApi1'
+      'getVxiaoshuoApi1',
+      'getTestInfo'
     ])
   },
   components: {

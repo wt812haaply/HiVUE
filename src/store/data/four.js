@@ -2,7 +2,8 @@
 import baidu  from '@/api/baidu'
 
 const state = {
-  cityList:[]
+  cityList:[],
+  textInfo:'这里是测试信息，由four提供'
 }
 
 const getters = {
@@ -27,7 +28,9 @@ const getters = {
    *
    */
 
-  getVxiaoshuoApi1:state => state.cityList
+  getVxiaoshuoApi1:state => state.cityList,
+  getTestInfo:state => state.textInfo
+
 }
 
 const actions = {
