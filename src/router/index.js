@@ -22,6 +22,8 @@ const accordionDemo = () => import('@/pages/demo/accordion/demo')
 const tabsDemo = () => import('@/pages/demo/tabs/demo')
 // bus 传值
 const busDemo = () => import('@/pages/demo/bus/a')
+//bus 子传子
+const busDemoChildren =() => import('@/pages/demo/bus/item')
 //sticky
 const stickyDemo = () => import('@/pages/demo/sticky/demo')
 // emit props
@@ -122,6 +124,11 @@ export default new Router({
       path: '/pages/demo/bus/a',
       name: 'bus',
       component: busDemo,
+    },
+    {
+      path: '/pages/demo/bus/item',
+      name: 'busChildren',
+      component: busDemoChildren,
     },
     {
       path: '/pages/demo/splitOrjoin/split',

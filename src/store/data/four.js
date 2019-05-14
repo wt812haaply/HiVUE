@@ -3,7 +3,7 @@ import baidu  from '@/api/baidu'
 
 const state = {
   cityList:[],
-  textInfo:'这里是测试信息，由four提供'
+  textInfo:'这里是测试信息，由vuex数据共享four提供'
 }
 
 const getters = {

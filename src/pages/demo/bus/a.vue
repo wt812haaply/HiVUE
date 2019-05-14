@@ -1,7 +1,10 @@
 <template>
 	<div>
 		<div @click="headMsg">点我下面的文案会替换</div>
-		<Bb></Bb> 
+		<Bb></Bb>
+    <router-link tag="div" to="item">
+      去item
+    </router-link>
 	</div>
 </template>
 
