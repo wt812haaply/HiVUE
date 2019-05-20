@@ -19,11 +19,23 @@ export default{
 		return{
 			testList:[
 			{
-				id:'002',
-				url:'links/',
-				name:'links',
-				tag:'One'
+				id:'000',
+				url:'demo/father/',
+				name:'父传子',
+				tag:'father'
 			},
+      {
+        id:'001',
+        url:'demo/child/',
+        name:'子传父',
+        tag:'father'
+      },
+      {
+        id:'002',
+        url:'links/',
+        name:'links',
+        tag:'One'
+      },
 			{
 				id:'003',
 				url:'demo/bus/',

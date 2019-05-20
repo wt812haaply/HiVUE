@@ -27,7 +27,7 @@
 		methods:{
       click1(){},
       click2(){
-        console.log('2')
+        console.log('我的数据是父的----2')
       }
     },
     created(){

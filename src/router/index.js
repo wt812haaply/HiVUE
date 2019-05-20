@@ -15,6 +15,11 @@ const Four = () => import('@/pages/links/Four')
 
 
 // ！ demo
+//父-->子
+const fatherDemo = () => import('@/pages/demo/father/father')
+//子-->父
+const childDemo = () => import('@/pages/demo/child/father')
+
 const splitDemo = () => import('@/pages/demo/splitOrjoin/split')
 // 手风琴
 const accordionDemo = () => import('@/pages/demo/accordion/demo')
@@ -120,6 +125,16 @@ export default new Router({
     },
 
     // demo
+    {
+      path: '/pages/demo/child/father',
+      name: '子',
+      component: childDemo,
+    },
+    {
+      path: '/pages/demo/father/father',
+      name: '父',
+      component: fatherDemo,
+    },
     {
       path: '/pages/demo/bus/a',
       name: 'bus',
