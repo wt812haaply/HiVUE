@@ -11,18 +11,6 @@
         <div :class="[isStatus ? testingClass : '','testingBg']">3</div>
       </div>
       <!--test End-->
-
-      <!--mixin 混入-->
-      <div>
-       <button @click="Total">button</button>
-        <p>{{isTotal}}</p>
-        {{ two }} <!--取的mixin two -->
-
-        <button @click="Total2">button 2</button>
-        <p>{{isTotal2}}</p>
-       - {{ three }} <!-- 当前组件data 中的three -->
-       - {{ two }} <!--取的mixin two -->
-      </div>
     <!-- <transition name="animated" enter-active-class="animated bounceOutLeft" leave-active-class="animated bounceOutRight">
       <div class="homItem" v-show="headMsg">
         <div class="testImg">
@@ -53,14 +41,12 @@ import homeIcons from './components/Icons'
 import homeRecommend from './components/Recommend'
 import homeLikes from './components/Likes'
 import homePopUp from './components/PopUp'
-import { testing } from '@/common/js/mixin'
 
 //接口文件
 import baidu  from '@/api/baidu'
 
 export default {
   name: 'Home',
-  mixins: [ testing ],
   components: {
     homeHeader,
     homeSwiper,
@@ -75,7 +61,6 @@ export default {
       //
       testingClass:'testing',
       isStatus:true,
-      isTotal2:'',
       three:20,
       //
 
@@ -299,25 +284,13 @@ export default {
     }
   },
   methods: {
-    // mixin
-    Total2(){
-      this.isTotal2 += this.three + this.two
-    },
-
-
     baidu(){
       let info = {
         type:1,
         page:1
       }
-//      baidu.xiaoshuoApi(info).then((res) =>{
-//        console.log(res)
-//      })
-
       baidu.xiaoshuoApi1(info).then((res) =>{
-//        console.log(res)
         this.haha = res.data.msg
-//        console.log(this.haha,'this.haha')
       })
 
 

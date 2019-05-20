@@ -42,7 +42,7 @@ export default {
 //		}
 	},
   created() {
-	  this.$store.dispatch('getCC')
+	  // this.$store.dispatch('getCC')
   }
 }
 </script>

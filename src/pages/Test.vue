@@ -67,6 +67,12 @@ export default{
 				name: 'sticky吸顶',
 				tag: 'demo'
 			},
+      {
+        id:'009',
+        url:'demo/mixinDemo/',
+        name:'mixin',
+        tag:'mixinDemo'
+      },
 			{
 				id: '010',
 				url: 'demo/scroller/',
