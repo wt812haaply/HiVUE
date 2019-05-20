@@ -31,8 +31,6 @@ const busDemo = () => import('@/pages/demo/bus/a')
 const busDemoChildren =() => import('@/pages/demo/bus/item')
 //sticky
 const stickyDemo = () => import('@/pages/demo/sticky/demo')
-// emit props
-const emitpropsDemo = () => import('@/pages/demo/emitprops/demo')
 //scroller
 const scrollerDemo = () => import('@/pages/demo/scroller/demo')
 //testDemo
@@ -164,11 +162,6 @@ export default new Router({
       path: '/pages/demo/sticky/demo',
       name: 'sticky',
       component: stickyDemo,
-    },
-    {
-      path: '/pages/demo/emitprops/demo',
-      name: 'emitprops',
-      component: emitpropsDemo
     },
     {
       path: '/pages/demo/scroller/demo',
