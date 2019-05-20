@@ -2,7 +2,7 @@ export const testMixin = {
   data(){
     return {
       text:{
-        msg:'textMixin2'
+        msg:'mixins混入'
       },
       one:1,
       two:2,

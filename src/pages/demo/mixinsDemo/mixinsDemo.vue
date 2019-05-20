@@ -1,23 +1,21 @@
 <!-- 模板展示 -->
 <template>
 	<div>
-    <!--mixin 混入-->
-    <h3>mixin</h3>
-    {{text.msg}}
+    <!--mixins 混入-->
+    <h3>{{text.msg}}</h3>
 
     <!--1-->
-    <button @click="Total">按钮</button>
+    <button @click="Total">点我1</button>
     {{isTotal}}
 
     <!--2 方法同1-->
-    <button @click="yes">222222</button>
+    <button @click="getInfo">点我2</button>
     {{what}}
   </div>
 </template>
-
 <!-- 逻辑处理 -->
 <script>
-  import { testMixin } from '@/mixin/mixintest'
+import { testMixin } from '@/mixins/mixintest'
 export default {
 	name:'',
 	data () {
@@ -36,7 +34,7 @@ export default {
 
 	// 事件方法
 	methods: {
-    yes () {
+    getInfo () {
       this.what = this.one + this.two
     }
 	},
@@ -65,4 +63,13 @@ export default {
 
 
 <!-- 样式处理 -->
-<style scoped lang='scss'></style>
+<style scoped lang='scss'>
+  button{
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    border:1px red solid;
+    color: #000;
+    margin-bottom: 10px;
+  }
+</style>

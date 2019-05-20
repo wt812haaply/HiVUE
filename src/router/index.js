@@ -15,8 +15,8 @@ const Four = () => import('@/pages/links/Four')
 
 
 // ！ demo
-//mixin
-const mixinDemo = () => import('@/pages/demo/mixinDemo/mixinDemo')
+//mixins
+const mixinsDemo = () => import('@/pages/demo/mixinsDemo/mixinsDemo')
 //父-->子
 const fatherDemo = () => import('@/pages/demo/father/father')
 //子-->父
@@ -127,9 +127,9 @@ export default new Router({
     // demo
 
     {
-      path: '/pages/demo/mixinDemo/mixinDemo',
-      name: 'mixin',
-      component: mixinDemo,
+      path: '/pages/demo/mixinsDemo/mixinsDemo',
+      name: 'mixins',
+      component: mixinsDemo,
     },
     {
       path: '/pages/demo/child/father',

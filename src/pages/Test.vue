@@ -69,9 +69,9 @@ export default{
 			},
       {
         id:'009',
-        url:'demo/mixinDemo/',
-        name:'mixin',
-        tag:'mixinDemo'
+        url:'demo/mixinsDemo/',
+        name:'mixins',
+        tag:'mixinsDemo'
       },
 			{
 				id: '010',
