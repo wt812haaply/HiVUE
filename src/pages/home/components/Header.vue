@@ -7,7 +7,6 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 export default {
 	name: 'HomeHeader',
 	data () {
@@ -27,16 +26,13 @@ export default {
 	},
 	methods:{
 		headPopUp(){
-//			this.$store.state.popUpstatus = !this.$store.state.popUpstatus
-//      console.log(this.$store.getters.getAA,'vuex获取的值')
-//      console.log(this.$store.getters.getBB,'//////1111')
-      console.log(this.$store.getters.getCC,'/?')
+      console.log(this.$store.getters.getTestInfo)
 		}
 	},
 	computed:{
-    ...mapGetters([
-      'getCC'
-    ])
+    // ...mapGetters([
+    //   'getCC'
+    // ])
 //		headGetpopUpStatus(){
 //			return this.$store.state.popUpstatus
 //		}
