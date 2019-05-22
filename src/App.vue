@@ -28,9 +28,17 @@ i {
 #app {
   background: #fff;
   height: 100%;
+  font-size: 12px;
 }
-
-
+button{
+  width: 100px;
+  height: 40px;
+  border:1px red solid;
+  background: antiquewhite;
+  color: #000;
+  display: block;
+  margin: 10px 0;
+}
 /*  组件动画
 <transition 
   appear

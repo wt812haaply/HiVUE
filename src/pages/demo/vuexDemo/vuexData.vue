@@ -1,8 +1,14 @@
 <template>
   <div>
     <div>vuex共享数据 ------ vuexDemo 测试</div>
-    <button @click="testInfo">测试信息</button>
-    <p>{{ vuexTestInfo }}</p>
+    <ul style='margin-top:100px'>
+      <!--
+        getVxiaoshuoApi1 是store -- data -- four.js 里面的数据方法
+      -->
+      <li v-for="(item,index) in getVxiaoshuoApi1" :key="index">
+        {{ item.author}} + {{index + 1}}
+      </li>
+    </ul>
   </div>
 </template>
 <script>
@@ -16,18 +22,18 @@ export default {
     }
   },
   methods: {
-    testInfo(){
-      // 从vuex获取数据 给  this.vuexTestInfo
-      this.vuexTestInfo = this.$store.getters.getTestInfo
-    }
   },
   computed:{
+    ...mapGetters([
+      'getVxiaoshuoApi1'
+    ])
   },
   components: {
 
   },
 
   created() {
+    this.$store.dispatch('getVxiaoshuoApi1')
   }
 }
 

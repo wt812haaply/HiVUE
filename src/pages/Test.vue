@@ -90,6 +90,12 @@ export default{
         url:'demo/vuexDemo/',
         name:'vuex测试',
         tag:'vuex'
+      },
+      {
+        id:'0013',
+        url:'demo/vuexDemo/',
+        name:'vuexData测试',
+        tag:'vuexData'
       }
 			]
 		}

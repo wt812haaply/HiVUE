@@ -60,9 +60,4 @@ export default {
 
 <!-- 样式处理 -->
 <style scoped lang='scss'>
-  button{
-    background: #999;
-    width: 100px;
-    height: 40px;
-  }
 </style>

@@ -39,6 +39,8 @@ const scrollerDemo = () => import('@/pages/demo/scroller/demo')
 const testDemo = () => import('@/pages/demo/testDemo/test')
 //vuexDemo
 const vuexDemo = () => import('@/pages/demo/vuexDemo/vuex')
+//vuexDataDemo
+const vuexDataDemo = () => import('@/pages/demo/vuexDemo/vuexData')
 Vue.use(Router)
 export default new Router({
   mode: 'history',
@@ -192,5 +194,13 @@ export default new Router({
         title: '衣二三'
       }
     },
+    {
+      path:'/pages/demo/vuexDemo/vuexData',
+      name:'vuexDataDemo',
+      component: vuexDataDemo,
+      meta: {
+        title: '衣二三'
+      }
+    }
   ]
 })
