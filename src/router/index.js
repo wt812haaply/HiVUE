@@ -38,7 +38,7 @@ const scrollerDemo = () => import('@/pages/demo/scroller/demo')
 //testDemo
 const testDemo = () => import('@/pages/demo/testDemo/test')
 //vuexDemo
-const vuexDemo = () => import('@/pages/demo/vuexDemo/vuex')
+const vuexDemo = () => import('@/pages/demo/vuexDemo/vuexText')
 //vuexDataDemo
 const vuexDataDemo = () => import('@/pages/demo/vuexDemo/vuexData')
 Vue.use(Router)
@@ -187,7 +187,7 @@ export default new Router({
       }
     },
     {
-      path:'/pages/demo/vuexDemo/vuex',
+      path:'/pages/demo/vuexDemo/vuexText',
       name:'vuexDemo',
       component: vuexDemo,
       meta: {

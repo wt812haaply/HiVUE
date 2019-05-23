@@ -89,7 +89,7 @@ export default{
         id:'0012',
         url:'demo/vuexDemo/',
         name:'vuex测试',
-        tag:'vuex'
+        tag:'vuexText'
       },
       {
         id:'0013',
