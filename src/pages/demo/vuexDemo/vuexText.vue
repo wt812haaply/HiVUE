@@ -2,7 +2,8 @@
   <div>
     <div>vuex共享数据 ------ vuexDemo 测试</div>
     <button @click="testInfo">测试信息</button>
-    <p>{{ vuexTestInfo }}</p>
+    <p>{{ vuexTestInfo.msg }}</p>
+    <p>{{ vuexTestInfo.text }}</p>
   </div>
 </template>
 <script>

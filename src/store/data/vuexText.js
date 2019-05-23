@@ -1,9 +1,12 @@
 export default {
   state:{
-    textInfo:'这里是测试信息，由vuex数据共享<<VUEX.JS>>'
+    allInfo:{
+      text:'这里是测试信息，由vuex数据共享<<VUEX.JS>>',
+      msg:'1000000'
+    }
   },
   getters:{
-    getTestInfo:state => state.textInfo
+    getTestInfo:state => state.allInfo
   },
   actions:{},
   mutations:{}
