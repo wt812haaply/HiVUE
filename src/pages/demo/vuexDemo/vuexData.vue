@@ -5,9 +5,10 @@
       <!--
         getVxiaoshuoApi1 是store -- data -- four.js 里面的数据方法
       -->
-      <li v-for="(item,index) in getVxiaoshuoApi1" :key="index">
-        {{ item.author}} + {{index + 1}}
+      <li v-for="(item,index) in getData" :key="index">
+        {{ item.author}}
       </li>
+
     </ul>
   </div>
 </template>
@@ -17,15 +18,12 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'vuex',
   data() {
-    return {
-      vuexTestInfo:''
-    }
+    return {}
   },
-  methods: {
-  },
+  methods: {},
   computed:{
     ...mapGetters([
-      'getVxiaoshuoApi1'
+      'getData'
     ])
   },
   components: {
@@ -33,12 +31,14 @@ export default {
   },
 
   created() {
-    this.$store.dispatch('getVxiaoshuoApi1')
+    this.$store.dispatch('getData')
   }
 }
 
 </script>
 <style scoped lang='scss'>
 
-
+li{
+  line-height: 2;
+}
 </style>

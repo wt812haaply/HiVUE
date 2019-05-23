@@ -4,24 +4,27 @@ import baidu  from '@/api/baidu'
 
 
 export default {
+
   state:{
     cityList:[],
   },
   getters:{
-    getVxiaoshuoApi1:state => state.cityList,
+    getData:state => state.cityList,
   },
   actions:{
-    getVxiaoshuoApi1(context){
+
+    //1
+    getData(context){
       baidu.xiaoshuoApi1().then((res )=>{
         if(res.data.code == 200){
-          context.commit('getVxiaoshuoApi1',res.data.data)
+          context.commit('getArry',res.data.data)
         }
       })
-    }
+    },
   },
   mutations:{
-    getVxiaoshuoApi1(state, list) {
-      state.cityList = list
+    getArry(state, payload) {
+      state.cityList = payload
     }
   }
 }
