@@ -9,7 +9,7 @@ export default {
     cityList:[],
   },
   getters:{
-    getData:state => state.cityList,
+    listData:state => state.cityList,
   },
   actions:{
 

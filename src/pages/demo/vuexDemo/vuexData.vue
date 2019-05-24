@@ -5,7 +5,7 @@
       <!--
         getVxiaoshuoApi1 是store -- data -- four.js 里面的数据方法
       -->
-      <li v-for="(item,index) in getData" :key="index">
+      <li v-for="(item,index) in listData" :key="index">
         {{ item.author}}
       </li>
 
@@ -23,7 +23,7 @@ export default {
   methods: {},
   computed:{
     ...mapGetters([
-      'getData'
+      'listData'
     ])
   },
   components: {
@@ -31,6 +31,8 @@ export default {
   },
 
   created() {
+    // demo/vuexDemo/vuexData 下面的
+    // getData 接口名称
     this.$store.dispatch('getData')
   }
 }
