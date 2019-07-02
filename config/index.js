@@ -11,10 +11,6 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/leaf': {
-        target: 'http://testwapi.95vintage.com/',
-        changeOrigin: true
-      },
       // '/openapi':{
       //   target: 'http://baike.baidu.com/api/',
       //   changeOrigin: true

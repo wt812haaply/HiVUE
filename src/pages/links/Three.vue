@@ -6,6 +6,8 @@
     </div>
     <div class="appContent">
 
+      <div class="hha" @click="$router.push('/pages/links/Four')">返回首页</div>
+
       <!-- 1 PopupCenter-->
       <div lang="en" @click="closeB">打开PopupCenter</div>
       <popup-Center
@@ -230,6 +232,11 @@ export default {
 <style scoped lang='scss'>
 #app > {
    @include layout(43,50)
+}
+.hha{
+  line-height: 31px;
+  font-size:24px;
+  color: #333;
 }
 .banner {
   background: blue;
