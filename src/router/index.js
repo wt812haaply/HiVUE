@@ -15,6 +15,13 @@ const Four = () => import('@/pages/links/Four')
 
 
 // ！ demo
+//mixins
+const mixinsDemo = () => import('@/pages/demo/mixinsDemo/mixinsDemo')
+//父-->子
+const fatherDemo = () => import('@/pages/demo/father/father')
+//子-->父
+const childDemo = () => import('@/pages/demo/child/father')
+
 const splitDemo = () => import('@/pages/demo/splitOrjoin/split')
 // 手风琴
 const accordionDemo = () => import('@/pages/demo/accordion/demo')
@@ -22,14 +29,18 @@ const accordionDemo = () => import('@/pages/demo/accordion/demo')
 const tabsDemo = () => import('@/pages/demo/tabs/demo')
 // bus 传值
 const busDemo = () => import('@/pages/demo/bus/a')
+//bus 子传子
+const busDemoChildren =() => import('@/pages/demo/bus/item')
 //sticky
 const stickyDemo = () => import('@/pages/demo/sticky/demo')
-// emit props
-const emitpropsDemo = () => import('@/pages/demo/emitprops/demo')
 //scroller
 const scrollerDemo = () => import('@/pages/demo/scroller/demo')
 //testDemo
 const testDemo = () => import('@/pages/demo/testDemo/test')
+//vuexDemo
+const vuexDemo = () => import('@/pages/demo/vuexDemo/vuexText')
+//vuexDataDemo
+const vuexDataDemo = () => import('@/pages/demo/vuexDemo/vuexData')
 Vue.use(Router)
 export default new Router({
   mode: 'history',
@@ -116,10 +127,31 @@ export default new Router({
     },
 
     // demo
+
+    {
+      path: '/pages/demo/mixinsDemo/mixinsDemo',
+      name: 'mixins',
+      component: mixinsDemo,
+    },
+    {
+      path: '/pages/demo/child/father',
+      name: '子',
+      component: childDemo,
+    },
+    {
+      path: '/pages/demo/father/father',
+      name: '父',
+      component: fatherDemo,
+    },
     {
       path: '/pages/demo/bus/a',
       name: 'bus',
       component: busDemo,
+    },
+    {
+      path: '/pages/demo/bus/item',
+      name: 'busChildren',
+      component: busDemoChildren,
     },
     {
       path: '/pages/demo/splitOrjoin/split',
@@ -142,11 +174,6 @@ export default new Router({
       component: stickyDemo,
     },
     {
-      path: '/pages/demo/emitprops/demo',
-      name: 'emitprops',
-      component: emitpropsDemo
-    },
-    {
       path: '/pages/demo/scroller/demo',
       name: 'scroller',
       component: scrollerDemo
@@ -159,5 +186,21 @@ export default new Router({
         title: '衣二三'
       }
     },
+    {
+      path:'/pages/demo/vuexDemo/vuexText',
+      name:'vuexDemo',
+      component: vuexDemo,
+      meta: {
+        title: '衣二三'
+      }
+    },
+    {
+      path:'/pages/demo/vuexDemo/vuexData',
+      name:'vuexDataDemo',
+      component: vuexDataDemo,
+      meta: {
+        title: '衣二三'
+      }
+    }
   ]
 })

@@ -6,6 +6,8 @@
     </div>
     <div class="appContent">
 
+      <div class="hha" @click="$router.push('/pages/links/Four')">返回首页</div>
+
       <!-- 1 PopupCenter-->
       <div lang="en" @click="closeB">打开PopupCenter</div>
       <popup-Center
@@ -14,7 +16,9 @@
         @btnC="linksC"
         @closeCenterBtn="closeB"
         @oneBtn="oneBtn"
-        :open="OpenPopupCenter">
+        :open="OpenPopupCenter"
+        v-show="stepTip.mask"
+      >
         <div slot="banner">
           <div class="banner">
             <img src="http://tu.yi23.net/collections/863-20180528_184712-1527504432586-1.jpg" alt="">
@@ -108,6 +112,9 @@ import popupCenter from '@/pages/lib/PopupCenter'
 import popupDown from '@/pages/lib/PopupDown'
 import popupRight from '@/pages/lib/PopupRight'
 import notify from '@/pages/lib/Notify'
+
+//引用方法地址
+import utils  from '@/common/js/utils.js'
 export default {
   name: 'three',
   data() {
@@ -122,9 +129,29 @@ export default {
 
       OpenNotify: false,
       step: 1000,
+      stepTip: {
+        one:true,
+        two:false,
+        three:false,
+        mask:true,
+      },
     }
   },
   methods: {
+//    getLocalStorage(){
+//      let once = localStorage.getItem("indexTips")
+//      if(!once){
+//        localStorage.setItem("indexTips",1)
+//        this.stepTip.mask = !this.stepTip.mask;
+//        console.log(this.stepTip.mask)
+//      }
+//      else {
+//        this.stepTip.mask = !this.stepTip.mask;
+//        console.log(this.stepTip.mask)
+//      }
+//    },
+
+
     // testlinks
     testLinks(){
       this.$router.push({
@@ -148,6 +175,7 @@ export default {
     oneBtn() {
       console.log("-----oneBtn按钮关闭-----")
       this.closeB()
+
     },
 
 
@@ -184,6 +212,19 @@ export default {
     popupDown,
     popupRight,
     notify
+  },
+
+  created() {
+
+    //公用方法
+    let once =  utils.messageStatus()
+    if(once){
+      this.stepTip.mask = true;
+    }else {
+      this.stepTip.mask = false;
+    }
+    //end
+
   }
 }
 
@@ -191,6 +232,11 @@ export default {
 <style scoped lang='scss'>
 #app > {
    @include layout(43,50)
+}
+.hha{
+  line-height: 31px;
+  font-size:24px;
+  color: #333;
 }
 .banner {
   background: blue;

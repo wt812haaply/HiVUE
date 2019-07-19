@@ -19,11 +19,23 @@ export default{
 		return{
 			testList:[
 			{
-				id:'002',
-				url:'links/',
-				name:'links',
-				tag:'One'
+				id:'000',
+				url:'demo/father/',
+				name:'父传子',
+				tag:'father'
 			},
+      {
+        id:'001',
+        url:'demo/child/',
+        name:'子传父',
+        tag:'father'
+      },
+      {
+        id:'002',
+        url:'links/',
+        name:'links',
+        tag:'One'
+      },
 			{
 				id:'003',
 				url:'demo/bus/',
@@ -55,35 +67,40 @@ export default{
 				name: 'sticky吸顶',
 				tag: 'demo'
 			},
-			{
-				id: '009',
-				url: 'demo/emitprops/',
-				name: '子父传值',
-				tag: 'demo'
-			},
+      {
+        id:'009',
+        url:'demo/mixinsDemo/',
+        name:'mixins',
+        tag:'mixinsDemo'
+      },
 			{
 				id: '010',
 				url: 'demo/scroller/',
 				name: '下拉刷新',
 				tag: 'demo'
-			}, {
-			  id:'0011',
-          url:'demo/testDemo/',
-          name:'测试',
-          tag:'test'
-        }
+			},
+      {
+        id:'0011',
+        url:'demo/testDemo/',
+        name:'测试',
+        tag:'test'
+      },
+      {
+        id:'0012',
+        url:'demo/vuexDemo/',
+        name:'vuex测试',
+        tag:'vuexText'
+      },
+      {
+        id:'0013',
+        url:'demo/vuexDemo/',
+        name:'vuexData测试',
+        tag:'vuexData'
+      }
 			]
 		}
 	},
   methods: {
-//    baidu() {
-//      let txt = '/leaf/posting/extend/123'
-//      let baiduApi = '/openapi/BaikeLemmaCardApi?scope=103&format=json&appid=379020&bk_key=%E9%93%B6%E9%AD%82&bk_length=600'
-//      axios.get(baiduApi).then((res) => {
-//        console.log(res);
-//      });
-//
-//    }
 
   },
   // 接口数据

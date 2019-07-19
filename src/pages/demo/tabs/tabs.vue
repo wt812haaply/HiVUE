@@ -42,6 +42,7 @@ export default {
 	// 事件方法
 	methods: {
     selectTab: function(selectedTab) {
+      console.log(selectedTab,'m')
 	      this.tabs.forEach(tab => {
 	        tab.isActive = (tab.name == selectedTab.name);
 	      });

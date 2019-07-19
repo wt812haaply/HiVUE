@@ -1,11 +1,16 @@
 <template>
-  <div class="appContainer">
+  <div class="appContainer font-RobotoTh ">
     <div class="appHeader">
-      <home-Header :headinfo="header" :haha="haha" />
+      <home-Header :headinfo="header" :hahainfo="haha" />
     </div>
-
     <div class="appContent">
-    <!-- <div></div> -->
+      <!--test-->
+      <div v-if="false">
+        <div :class="[{testing:isStatus},'testingBg']">1</div>
+        <div :class="{testing:isStatus}" class="testingBg">2</div>
+        <div :class="[isStatus ? testingClass : '','testingBg']">3</div>
+      </div>
+      <!--test End-->
     <!-- <transition name="animated" enter-active-class="animated bounceOutLeft" leave-active-class="animated bounceOutRight">
       <div class="homItem" v-show="headMsg">
         <div class="testImg">
@@ -13,7 +18,6 @@
         </div>
       </div>
     </transition> -->
-
     <home-Swiper :cont="swiperList" />
     <home-Icons :cont="iconList" />
     <home-Recommend :cont="recList" />
@@ -54,6 +58,14 @@ export default {
   },
   data() {
     return {
+      //
+      testingClass:'testing',
+      isStatus:true,
+      three:20,
+      //
+
+
+
       haha:'',
       show:false,
       headMsg:false,
@@ -273,23 +285,13 @@ export default {
   },
   methods: {
     baidu(){
-      baidu.baiduApi().then((res) =>{
-        console.log(res)
-        this.haha = res.key;
-      })
-
       let info = {
         type:1,
         page:1
       }
-      baidu.xiaoshuoApi(info).then((res) =>{
-        console.log(res)
-      })
-
       baidu.xiaoshuoApi1(info).then((res) =>{
-        console.log(res)
+        this.haha = res.data.msg
       })
-
 
 
 
@@ -298,8 +300,11 @@ export default {
 
   },
   created(){
-    this.baidu()
+     this.baidu()
+    console.log('Home')
   },
+  computed:{
+  }
 }
 
 </script>
@@ -311,12 +316,17 @@ export default {
 .homItem {
   @include center(200);
   z-index: 9;
-  .testImg {
-    @include WH(200);
-    padding-bottom: 92.3333%;
-  }
 }
-.hhh{
 
+
+.testing{
+  width: 100%;
+  height: 200px;
+  background: red;
 }
+
+.testingBg{
+  background: blue;
+}
+
 </style>

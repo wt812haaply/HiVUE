@@ -3,8 +3,8 @@ const Common = {
   /*
   * @求和
   */
-  getSummation(a,b){
-    return a+b;
+  getSummation(a, b) {
+    return a + b;
   },
 
 
@@ -12,7 +12,7 @@ const Common = {
   * @desc 获取操作系统类型
   * @return {Number}
   */
-  getClientType(){
+  getClientType() {
     // 1 ios, 2 android, 3 wechart, 4 alipay
     const ua = window.navigator.userAgent.toLowerCase();
     const ios = ua.match(/yi23-ios-client/);
@@ -30,7 +30,23 @@ const Common = {
     } else {
       return 0;
     }
-  }
+  },
+
+
+  /*
+   * @localStorage
+   */
+  messageStatus(keys) {
+    keys = keys ? keys : 'vip'
+    let once = localStorage.getItem(keys)
+    let mask = true
+    if (!once) {
+      localStorage.setItem(keys, 1)
+    } else {
+      mask = false
+    }
+    return mask
+  },
 
 
 }

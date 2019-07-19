@@ -5,10 +5,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+
 // 样式
 // import iphoneX from '@/common/style/iphoneX.css'
 // import Animate from '@/common/style/animate.css'
 
+import  iconFont from '@/common/style/iconFont.css'
 // swiper
 // import 'swiper/dist/css/swiper.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
@@ -26,8 +28,8 @@ Vue.use(VueLazyLoad,{
 import VueScroller from 'vue-scroller'
 Vue.use(VueScroller)
 
-//store
-import store from './store'
+//store vuexDemo
+import store from './store/store'
 
 
 //axios

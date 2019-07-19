@@ -1,7 +1,7 @@
 <template>
 	<div class="homeHeader">
 		<div class="headerLeft" @click="headPopUp">{{ headinfo.left}}</div>
-    <div class="headerCont"><input type="" name="" placeholder="输入城市游玩主题" ></div>
+    <div class="headerCont"><input type="" name="" :placeholder="hahainfo" ></div>
 		<div class="headerRight">{{ headinfo.right }}</div>
 	</div>
 </template>
@@ -11,25 +11,35 @@ export default {
 	name: 'HomeHeader',
 	data () {
 		return {
+		  ruguo:''
 		}
 	},
 	props:{
 		headinfo:{
 			type:Object,
-		}
+		},
+    hahainfo:{
+		  type:String
+    }
 	},
 	wathc:{
 	},
 	methods:{
 		headPopUp(){
-			this.$store.state.popUpstatus = !this.$store.state.popUpstatus
+      console.log(this.$store.getters.getTestInfo)
 		}
 	},
 	computed:{
-		headGetpopUpStatus(){
-			return this.$store.state.popUpstatus
-		}
-	}
+    // ...mapGetters([
+    //   'getCC'
+    // ])
+//		headGetpopUpStatus(){
+//			return this.$store.state.popUpstatus
+//		}
+	},
+  created() {
+	  // this.$store.dispatch('getCC')
+  }
 }
 </script>
 <!-- sass -->
